@@ -28,6 +28,8 @@ The goal of this benchmark is to evaluate the models' ability to accurately capt
 - Wind farm wake characteristics
     - Momentum deficit (magnitude and extent)
     - TKE increase (magnitude and extent)
+    - Temperature, moisture
+    - Boundary layer height
 
 - Impacts on downstream wind plants
     - Power generation
@@ -75,11 +77,15 @@ The team responsible for the development of this benchmark will include, at mini
 Benchmark Cases
 ---------------
 
-Three scenarios will be used as benchmark cases:
+These scenarios will be used as benchmark cases:
 
 1. :blue:`Wake of King Plains under stable conditions, flow from the south, 95%+ of turbines operating at maximum thrust coefficient (based on wind speed or turbine operation)`
 2. :blue:`Wake of King Plains under unstable conditions, flow from the south, 95%+ of turbines operating at maximum thrust coefficient (based on wind speed or turbine operation)`
-3. :red:`Wake impact of Armadillo Flats on King plains under stable conditions, flow from the southwest, 95%+ of Armadillo Flats turbines operating at maximum thrust coefficient (based on wind speed or turbine operation)`
+3. :blue:`Wake of King Plains under neutral conditions, flow from the south, 95%+ of turbines operating at maximum thrust coefficient (based on wind speed or turbine operation)`
+
+1. :red:`Wake impact of Armadillo Flats on King plains under stable conditions, flow from the southwest, 95%+ of Armadillo Flats turbines operating at maximum thrust coefficient (based on wind speed or turbine operation)`
+2. :red:`Wake impact of Armadillo Flats on King plains under unstable conditions, flow from the southwest, 95%+ of Armadillo Flats turbines operating at maximum thrust coefficient (based on wind speed or turbine operation)`
+3. :red:`Wake impact of Armadillo Flats on King plains under neutral conditions, flow from the southwest, 95%+ of Armadillo Flats turbines operating at maximum thrust coefficient (based on wind speed or turbine operation)`
 
 .. figure:: images/benchmark_cases.png
 
@@ -87,31 +93,42 @@ Three scenarios will be used as benchmark cases:
 Inflow Observations Provided
 ----------------------------
 
-The following parameters will be provided to benchmark participants in the form of statistics and time series as inputs to their simulations:
+The following parameters will be provided to benchmark participants in the form of statistics (cases 1, 2, and 3) and time series (cases 1 and 2) as inputs to their simulations:
 
-+-----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Input parameter                         | Data source instrument (site)                                                                                           |
-+=========================================+=========================================================================================================================+
-| Hub-height wind speed and direction     | Profiling lidar (:blue:`A1`, :blue:`A2`, :red:`B`); Nacelle-mounted lidar (:blue:`turbine H05`)                         |
-+-----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Wind speed and direction profile        | Profiling lidar (:blue:`A1`, :blue:`A2`, :red:`B`)                                                                      |
-+-----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Hub-height turbulence intensity         | Profiling lidar (:blue:`A1`, :blue:`A2`, :red:`B`); Nacelle-mounted lidar (:blue:`turbine H05`)                         |
-+-----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Turbulence intensity profile            | Profiling lidar (:blue:`A1`, :blue:`A2`, :red:`B`)                                                                      |
-+-----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Atmospheric boundary layer height       | Ceilometer (:blue:`A1`); Scanning/profiling lidar (:blue:`A1`, :blue:`A2`, :red:`B`); Thermodynamic profiler (:red:`B`) |
-+-----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Roughness length                        | Database?                                                                                                               |
-+-----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Obukhov length                          | Sonic anemometer (:blue:`A1`, :blue:`A2`, :red:`B`)                                                                     |
-+-----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Kinetmatic vertical turbulent heat flux | Sonic anemometer (:blue:`A1`, :blue:`A2`, :red:`B`)                                                                     |
-+-----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Virtual potential temperature           | Sonic anemometer (:blue:`A1`, :blue:`A2`, :red:`B`)                                                                     |
-+-----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Air density                             |                                                                                                                         |
-+-----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| Input parameter                          | Data source instrument (site)                                                                                           |
++==========================================+=========================================================================================================================+
+| Vertical profiles of:                    || Profiling lidar (:blue:`A1`, :blue:`A2`, :red:`B`)                                                                     |
+|                                          || Scanning lidar used in profiling mode (:blue:`A1`)                                                                     |
+| - Horizontal wind speed                  || Nacelle-mounted Windcube lidar (:blue:`turbine H05`)                                                                   |
+| - Wind direction                         || Thermodynamic profiler (:blue:`AERI at A1`, :red:`ASSIST at B`)                                                        |
+| - Vertical wind speed                    |                                                                                                                         |
+| - Turbulence intensity                   |                                                                                                                         |
+| - Turbulent kinetic energy               |                                                                                                                         |
+| - Temperature                            |                                                                                                                         |
+| - Dissipation rate                       |                                                                                                                         |
+|                                          |                                                                                                                         |
++------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| Near-surface:                            || Sonic anemometer (:blue:`A1`, :blue:`A2`, :red:`B`)                                                                    |
+|                                          || Flux station (:blue:`A1`, :blue:`A2`, :red:`B`)                                                                        |
+| - Wind speed                             |                                                                                                                         |
+| - Wind direction                         |                                                                                                                         |
+| - Obukhov length                         |                                                                                                                         |
+| - Kinematic vertical turbulent heat flux |                                                                                                                         |
+| - Virtual potential temperature          |                                                                                                                         |
+| - Friction velocity                      |                                                                                                                         |
+|                                          |                                                                                                                         |
++------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| Atmospheric boundary layer height        || Ceilometer (:blue:`A1`)                                                                                                |
+|                                          || Scanning/profiling lidar (:blue:`A1`, :blue:`A2`, :red:`B`)                                                            |
+|                                          || Thermodynamic profiler (:blue:`AERI at A1`, :red:`ASSIST at B`)                                                        |
+|                                          |                                                                                                                         |
+|                                          |                                                                                                                         |
++------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| Roughness length                         | Database?                                                                                                               |
++------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| Air density                              |                                                                                                                         |
++------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 
 
 

@@ -41,6 +41,8 @@
 <dt>Wind farm wake characteristics</dt><dd><ul>
 <li><p>Momentum deficit (magnitude and extent)</p></li>
 <li><p>TKE increase (magnitude and extent)</p></li>
+<li><p>Temperature, moisture</p></li>
+<li><p>Boundary layer height</p></li>
 </ul>
 </dd>
 </dl>
@@ -105,11 +107,16 @@
 </section>
 <section id="benchmark-cases">
 <h2>Benchmark Cases<a class="headerlink" href="#benchmark-cases" title="Permalink to this heading">¶</a></h2>
-<p>Three scenarios will be used as benchmark cases:</p>
+<p>These scenarios will be used as benchmark cases:</p>
 <ol class="arabic simple">
 <li><p><span class="blue">Wake of King Plains under stable conditions, flow from the south, 95%+ of turbines operating at maximum thrust coefficient (based on wind speed or turbine operation)</span></p></li>
 <li><p><span class="blue">Wake of King Plains under unstable conditions, flow from the south, 95%+ of turbines operating at maximum thrust coefficient (based on wind speed or turbine operation)</span></p></li>
+<li><p><span class="blue">Wake of King Plains under neutral conditions, flow from the south, 95%+ of turbines operating at maximum thrust coefficient (based on wind speed or turbine operation)</span></p></li>
+</ol>
+<ol class="arabic simple">
 <li><p><span class="red">Wake impact of Armadillo Flats on King plains under stable conditions, flow from the southwest, 95%+ of Armadillo Flats turbines operating at maximum thrust coefficient (based on wind speed or turbine operation)</span></p></li>
+<li><p><span class="red">Wake impact of Armadillo Flats on King plains under unstable conditions, flow from the southwest, 95%+ of Armadillo Flats turbines operating at maximum thrust coefficient (based on wind speed or turbine operation)</span></p></li>
+<li><p><span class="red">Wake impact of Armadillo Flats on King plains under neutral conditions, flow from the southwest, 95%+ of Armadillo Flats turbines operating at maximum thrust coefficient (based on wind speed or turbine operation)</span></p></li>
 </ol>
 <figure class="align-default">
 <img alt="_images/benchmark_cases.png" src="_images/benchmark_cases.png" />
@@ -117,7 +124,7 @@
 </section>
 <section id="inflow-observations-provided">
 <h2>Inflow Observations Provided<a class="headerlink" href="#inflow-observations-provided" title="Permalink to this heading">¶</a></h2>
-<p>The following parameters will be provided to benchmark participants in the form of statistics and time series as inputs to their simulations:</p>
+<p>The following parameters will be provided to benchmark participants in the form of statistics (cases 1, 2, and 3) and time series (cases 1 and 2) as inputs to their simulations:</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Input parameter</p></th>
@@ -125,34 +132,53 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Hub-height wind speed and direction</p></td>
-<td><p>Profiling lidar (<span class="blue">A1</span>, <span class="blue">A2</span>, <span class="red">B</span>); Nacelle-mounted lidar (<span class="blue">turbine H05</span>)</p></td>
+<tr class="row-even"><td><p>Vertical profiles of:</p>
+<ul class="simple">
+<li><p>Horizontal wind speed</p></li>
+<li><p>Wind direction</p></li>
+<li><p>Vertical wind speed</p></li>
+<li><p>Turbulence intensity</p></li>
+<li><p>Turbulent kinetic energy</p></li>
+<li><p>Temperature</p></li>
+<li><p>Dissipation rate</p></li>
+</ul>
+</td>
+<td><div class="line-block">
+<div class="line">Profiling lidar (<span class="blue">A1</span>, <span class="blue">A2</span>, <span class="red">B</span>)</div>
+<div class="line">Scanning lidar used in profiling mode (<span class="blue">A1</span>)</div>
+<div class="line">Nacelle-mounted Windcube lidar (<span class="blue">turbine H05</span>)</div>
+<div class="line">Thermodynamic profiler (<span class="blue">AERI at A1</span>, <span class="red">ASSIST at B</span>)</div>
+</div>
+</td>
 </tr>
-<tr class="row-odd"><td><p>Wind speed and direction profile</p></td>
-<td><p>Profiling lidar (<span class="blue">A1</span>, <span class="blue">A2</span>, <span class="red">B</span>)</p></td>
-</tr>
-<tr class="row-even"><td><p>Hub-height turbulence intensity</p></td>
-<td><p>Profiling lidar (<span class="blue">A1</span>, <span class="blue">A2</span>, <span class="red">B</span>); Nacelle-mounted lidar (<span class="blue">turbine H05</span>)</p></td>
-</tr>
-<tr class="row-odd"><td><p>Turbulence intensity profile</p></td>
-<td><p>Profiling lidar (<span class="blue">A1</span>, <span class="blue">A2</span>, <span class="red">B</span>)</p></td>
+<tr class="row-odd"><td><p>Near-surface:</p>
+<ul class="simple">
+<li><p>Wind speed</p></li>
+<li><p>Wind direction</p></li>
+<li><p>Obukhov length</p></li>
+<li><p>Kinematic vertical turbulent heat flux</p></li>
+<li><p>Virtual potential temperature</p></li>
+<li><p>Friction velocity</p></li>
+</ul>
+</td>
+<td><div class="line-block">
+<div class="line">Sonic anemometer (<span class="blue">A1</span>, <span class="blue">A2</span>, <span class="red">B</span>)</div>
+<div class="line">Flux station (<span class="blue">A1</span>, <span class="blue">A2</span>, <span class="red">B</span>)</div>
+</div>
+</td>
 </tr>
 <tr class="row-even"><td><p>Atmospheric boundary layer height</p></td>
-<td><p>Ceilometer (<span class="blue">A1</span>); Scanning/profiling lidar (<span class="blue">A1</span>, <span class="blue">A2</span>, <span class="red">B</span>); Thermodynamic profiler (<span class="red">B</span>)</p></td>
+<td><div class="line-block">
+<div class="line">Ceilometer (<span class="blue">A1</span>)</div>
+<div class="line">Scanning/profiling lidar (<span class="blue">A1</span>, <span class="blue">A2</span>, <span class="red">B</span>)</div>
+<div class="line">Thermodynamic profiler (<span class="blue">AERI at A1</span>, <span class="red">ASSIST at B</span>)</div>
+</div>
+</td>
 </tr>
 <tr class="row-odd"><td><p>Roughness length</p></td>
 <td><p>Database?</p></td>
 </tr>
-<tr class="row-even"><td><p>Obukhov length</p></td>
-<td><p>Sonic anemometer (<span class="blue">A1</span>, <span class="blue">A2</span>, <span class="red">B</span>)</p></td>
-</tr>
-<tr class="row-odd"><td><p>Kinetmatic vertical turbulent heat flux</p></td>
-<td><p>Sonic anemometer (<span class="blue">A1</span>, <span class="blue">A2</span>, <span class="red">B</span>)</p></td>
-</tr>
-<tr class="row-even"><td><p>Virtual potential temperature</p></td>
-<td><p>Sonic anemometer (<span class="blue">A1</span>, <span class="blue">A2</span>, <span class="red">B</span>)</p></td>
-</tr>
-<tr class="row-odd"><td><p>Air density</p></td>
+<tr class="row-even"><td><p>Air density</p></td>
 <td></td>
 </tr>
 </tbody>
