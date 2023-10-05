@@ -50,7 +50,6 @@ The goal of this benchmark is to evaluate the models' ability to accurately capt
     - Plant layout
     - Turbine size
     - Topography
-    - Wake steering
 
 
 Simulation Tools
@@ -58,10 +57,12 @@ Simulation Tools
 
 The simulation tools targeted for comparison by this benchmark are:
 
-- `WRF <https://www.mmm.ucar.edu/models/wrf>`_
+- `WRF, WRF-LES <https://www.mmm.ucar.edu/models/wrf>`_
 - `FLORIS <https://www.nrel.gov/wind/floris.html>`_
+- `FLORIDyn <https://wes.copernicus.org/articles/7/2163/2022/wes-7-2163-2022.html>`_
+- `AMR-Wind <https://exawind.github.io/amr-wind/>`_
+- `ERF <https://erf.readthedocs.io/en/latest/>`_
 - Engineering models
-- Large-eddy simulation (LES)
 
 
 Team
