@@ -36,7 +36,7 @@ The following inputs and recommendations are provided to the benchmark participa
 - Recommended land use data set
     - National Land Cover Dataset 1 arc-sec 2019, about 30 m spatial resolution, can be downloaded from https://doi.org/10.5066/P9KZCM54. We note that WRF can use its default data base.
 - Recommended roughness length values
-    - We do not impose a fixed roughness length value to the benchmark participants. Instead, this should be considered as a calibration parameter to match the observed atmospheric conditions. In general, the AWAKEN region is characterized by pastures, crops, and scattered trees, so that roughness length values between 0.1-0.2 m seem appropriate. We also note that in WRF the roughness will be calculated by the planetary boundary layer used, based on the selected surface layer scheme.
+    - We do not impose a fixed roughness length value to the benchmark participants. Instead, this should be considered as a calibration parameter to match the observed atmospheric conditions. In general, the AWAKEN region is characterized by pastures, crops, and scattered trees, so that roughness length values between 0.03-0.2 m seem appropriate. We also note that in WRF the roughness will be calculated by the land surface model used, and then adopted in the selected surface layer scheme.
 - King Plain and Armadillo Flats turbine locations and dimensions
     - Can be downloaded from `here <https://app.box.com/s/ho2cf03d1blytt4ga80spnv3uz87tepu>`_. Note: the USGS wind turbine data base information about these two wind farms are NOT accurate.
 - Wind turbine model
