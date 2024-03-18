@@ -3,19 +3,25 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-The AWAKEN Benchmarks
+The AWAKEN benchmarks
 ============================================
 
 .. toctree::
    :hidden:
 
-   timeline
    testable_hypotheses
    field_site
-   metabenchmark
+   measurements
+   benchmark_1_farmwake
+   phase1
+   phase2
+   phase3
+   what_submit
+   timeline 
+   glossary
 
 
-.. figure:: images/site_photo.jpg
+.. figure:: images/awaken-logo-color.png
 
 The American Wake Experiment (AWAKEN) is a multi-institutional field campaign focused on gathering much-needed observations of wind farm-atmosphere interactions. These interactions are responsible for a large portion of the uncertainty in wind plant modeling tools that are used to represent wind plant performance both prior to construction and during operation, and can negatively impact wind energy profitability. The AWAKEN field campaign will provide benchmarking data for validation, ultimately improving modeling and lowering these uncertainties.
 
@@ -23,7 +29,7 @@ The American Wake Experiment (AWAKEN) is a multi-institutional field campaign fo
 Benchmarking phases
 -------------------
 
-The benchmarking process will occur in three phases:
+For each benchmark, we envision three phases:
 
 1. Code calibration
     Modelers will use inflow measurements to calibrate their code before the blind comparison

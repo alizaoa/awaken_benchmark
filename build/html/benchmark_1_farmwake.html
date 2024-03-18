@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Benchmark 1: Wind Farm Wake &#8212; AWAKEN Benchmarks 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Phase 1: model calibration" href="phase1.html" />
+    <link rel="prev" title="AWAKEN Measurements" href="measurements.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <style> .red {color:red} </style><style> .blue {color:blue} </style><section id="benchmark-1-wind-farm-wake">
+<h1>Benchmark 1: Wind Farm Wake<a class="headerlink" href="#benchmark-1-wind-farm-wake" title="Permalink to this heading">¶</a></h1>
+<section id="case-study">
+<h2>Case Study<a class="headerlink" href="#case-study" title="Permalink to this heading">¶</a></h2>
+<p>The goal of this benchmark is to simulate the area around the King Plains and Armadillo Flats wind farms on 24 August 2023. As stated above, the size of the modeling domain is left to the participants, however, we recommend to include both wind farms to be able to capture their interaction during the day to simulate.</p>
+<p>The figure below shows the observed wind speed, wind direction and lidar-derived TKE at AWAKEN site A1 on the selected case study. The vertical dashed lines show local sunset (left) and sunrise (right).</p>
+<figure class="align-default">
+<img alt="_images/a1_lidar.jpg" src="_images/a1_lidar.jpg" />
+</figure>
+</section>
+<section id="validation-objectives">
+<h2>Validation Objectives<a class="headerlink" href="#validation-objectives" title="Permalink to this heading">¶</a></h2>
+<p>The goal of this benchmark is to evaluate the models’ ability to accurately capture:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Wind farm wake characteristics</dt><dd><ul>
+<li><p>Momentum deficit</p></li>
+<li><p>Turbulence increase</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Impacts on downstream wind plants</dt><dd><ul>
+<li><p>Power generation</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Impacts on downstream environment</dt><dd><ul>
+<li><p>Temperature</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Effects of inflow conditions</dt><dd><ul>
+<li><p>Wind speed</p></li>
+<li><p>Wind direction</p></li>
+<li><p>Turbulence</p></li>
+<li><p>Atmospheric stability</p></li>
+<li><p>Shear and veer</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Effects of geometry</dt><dd><ul>
+<li><p>Plant layout</p></li>
+<li><p>Turbine size</p></li>
+<li><p>Topography</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="simulation-tools">
+<h2>Simulation Tools<a class="headerlink" href="#simulation-tools" title="Permalink to this heading">¶</a></h2>
+<p>All simulation tools are welcome to participate in this benchmark. This includes, but it is not limited to:</p>
+<ul class="simple">
+<li><p>Mesoscale models</p></li>
+<li><p>Steady-state analytical models</p></li>
+<li><p>Dynamic wake meandering-type models</p></li>
+<li><p>Engineering models</p></li>
+<li><p>Large-eddy simulation (LES), both coupled to mesoscale or run at the microscale only</p></li>
+<li><p>Reynolds-averaged Navier–Stokes (RANS) simulations</p></li>
+<li><p>Machine learning models</p></li>
+</ul>
+</section>
+<section id="guidelines">
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Participation in the benchmark is open to all participants of IEA Wind Task 57 “JAM”.</p></li>
+<li><p>Simulation tools should be used to the limit of their capabilities. 2D, steady-state solutions will be accepted for low-fidelity models. 3D, time-varying solutions will be expected from mid-to-high fidelity models.</p></li>
+<li><p>The choice of domain size, grid spacing, timestep, and other model configuration parameters is left to the discretion of the participants.</p></li>
+<li><p>Multi-model benchmark results will be published in journal article and co-authored by all participants who choose to release their results and participate in the publication effort.</p></li>
+<li><p>All provided results must observe the variable definitions and units as explicitly defined in the <a class="reference internal" href="glossary.html#glossary"><span class="std std-ref">glossary</span></a>.</p></li>
+</ul>
+</section>
+<section id="coordinate-system">
+<h2>Coordinate System<a class="headerlink" href="#coordinate-system" title="Permalink to this heading">¶</a></h2>
+<p>All benchmark analyses should use a coordinate system centered on King Plains’ turbine H05 (lat = 36.364708, lon = -97.405487), with the x-axis following longitude, and the y-axis following latitude, as shown in the image below:</p>
+<figure class="align-default">
+<img alt="_images/coordinate_system.png" src="_images/coordinate_system.png" />
+</figure>
+<p>Z (vertical height) should be calculated in meters above the terrain.</p>
+</section>
+<section id="team">
+<h2>Team<a class="headerlink" href="#team" title="Permalink to this heading">¶</a></h2>
+<p>A large team of researchers have participated to the preparation of this benchmark. The benchmark lead is Nicola Bodini (<a class="reference external" href="mailto:nicola&#46;bodini&#37;&#52;&#48;nrel&#46;gov">nicola<span>&#46;</span>bodini<span>&#64;</span>nrel<span>&#46;</span>gov</a>), feel free to reach out to him with questions!</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">AWAKEN Benchmarks</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="testable_hypotheses.html">AWAKEN Testable Hypotheses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="field_site.html">AWAKEN Field Site and Wind Farms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measurements.html">AWAKEN Measurements</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Benchmark 1: Wind Farm Wake</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#case-study">Case Study</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#validation-objectives">Validation Objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simulation-tools">Simulation Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#guidelines">Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coordinate-system">Coordinate System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#team">Team</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="phase1.html">Phase 1: model calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase2.html">Phase 2: blind comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase3.html">Phase 3: iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_submit.html">What to submit where?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeline.html">Timeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="measurements.html" title="previous chapter">AWAKEN Measurements</a></li>
+      <li>Next: <a href="phase1.html" title="next chapter">Phase 1: model calibration</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Aliza Abraham.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/benchmark_1_farmwake.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
