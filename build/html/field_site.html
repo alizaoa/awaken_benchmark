@@ -1,20 +1,23 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Field Site &#8212; AWAKEN Benchmarks 0.1 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=e031e9a9"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <title>AWAKEN Field Site and Wind Farms &#8212; AWAKEN Benchmarks 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Benchmark Template: Benchmark 1" href="metabenchmark.html" />
-    <link rel="prev" title="Testable Hypotheses" href="testable_hypotheses.html" />
+    <link rel="next" title="AWAKEN Measurements" href="measurements.html" />
+    <link rel="prev" title="AWAKEN Testable Hypotheses" href="testable_hypotheses.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -31,8 +34,8 @@
 
           <div class="body" role="main">
             
-  <section id="field-site">
-<span id="id1"></span><h1>Field Site<a class="headerlink" href="#field-site" title="Permalink to this heading">¶</a></h1>
+  <section id="awaken-field-site-and-wind-farms">
+<span id="field-site"></span><h1>AWAKEN Field Site and Wind Farms<a class="headerlink" href="#awaken-field-site-and-wind-farms" title="Permalink to this heading">¶</a></h1>
 <section id="arm-sgp">
 <h2>ARM SGP<a class="headerlink" href="#arm-sgp" title="Permalink to this heading">¶</a></h2>
 <p>The AWAKEN field campaign is taking place in northern Oklahoma, in proximity to the <a class="reference external" href="https://www.arm.gov/capabilities/observatories/sgp">DOE Atmospheric Radiation Measurement (ARM) Program’s Southern Great Plains (SGP) facility</a>. The SGP covers 55,000 acres and includes more than 30 instrument clusters.</p>
@@ -41,12 +44,19 @@
 <h2>Wind Plants<a class="headerlink" href="#wind-plants" title="Permalink to this heading">¶</a></h2>
 <p>Five wind plants south of the central SGP facility comprise the AWAKEN field campaign area. Details about each plant are located in the table below.</p>
 <table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 19%" />
+<col style="width: 15%" />
+<col style="width: 33%" />
+<col style="width: 20%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Wind plant</p></th>
 <th class="head"><p>Year of first operation</p></th>
 <th class="head"><p>Number of turbines</p></th>
 <th class="head"><p>Turbine model (rotor diameter, hub height)</p></th>
-<th class="head"><p>Net capacity factor <a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></th>
+<th class="head"><p>Net capacity factor <a class="footnote-reference brackets" href="#id2" id="id1">1</a></p></th>
 </tr>
 </thead>
 <tbody>
@@ -90,137 +100,16 @@
 <tr class="row-even"><td><p>King Plains</p></td>
 <td><p>2020</p></td>
 <td><p>88</p></td>
-<td><p>GE 2.82 MW (127 m, 90 m)</p></td>
+<td><p>GE 2.82 MW (127 m, 89 m)</p></td>
 <td><p>0.37</p></td>
 </tr>
 </tbody>
 </table>
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id3" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
-<p>Net capacity factors are calculated as an average from the annual net generation values reported by the U.S. EIA. (“Electricity plan level data for oklahoma,” <a class="reference external" href="https://www.eia.gov/opendata/v1/qb.php?category=902967">https://www.eia.gov/opendata/v1/qb.php?category=902967</a>, Last accessed on 2022-12-30.) Data for the first year reported by the EIA are not considered in the calculation.</p>
-</aside>
-</aside>
-</section>
-<section id="instrumentation">
-<h2>Instrumentation<a class="headerlink" href="#instrumentation" title="Permalink to this heading">¶</a></h2>
-<figure class="align-default">
-<img alt="_images/instrument_sites.png" src="_images/instrument_sites.png" />
-</figure>
-<p><em>Figure: Map of the AWAKEN field sites (yellow stars) and the four instrumented turbines (yellow circles).</em></p>
-<p>Instruments were placed within the AWAKEN field domain based on the <a class="reference internal" href="testable_hypotheses.html#testable-hypotheses"><span class="std std-ref">prioritized set of testable hypotheses</span></a>. There are a total of 13 remote ground-based field sites hosting a variety of intstruments. The King Plains wind plant was chosen for detialed study as it is the most modern plant in the area, and is therefore the most heavily instrumented. In addition to the ground-based sites around the plant, five King Plains turbines also host instruments. The table below lists the deployed instrumentation at each site, along with the testable hypotheses they are intended to address. Note that not all instruments remained deployed for the entire duration of the campaign.</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Site name</p></th>
-<th class="head"><p>Instrumentation</p></th>
-<th class="head"><p>Flow region</p></th>
-<th class="head"><p><a class="reference internal" href="testable_hypotheses.html#testable-hypotheses"><span class="std std-ref">Testable hypotheses</span></a></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>A1</p></td>
-<td><p>SL, PL, TP, Ceil, Flux, Met, Rad, Prec</p></td>
-<td><p>Inflow</p></td>
-<td><p>2, 3, 5, 7</p></td>
-</tr>
-<tr class="row-odd"><td><p>A2</p></td>
-<td><p>SL, PL, Flux, Met</p></td>
-<td><p>Inflow</p></td>
-<td><p>3, 5, 7</p></td>
-</tr>
-<tr class="row-even"><td><p>A5</p></td>
-<td><p>SL, Flux, Met</p></td>
-<td><p>Inflow</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="row-odd"><td><p>A7</p></td>
-<td><p>SL, Met</p></td>
-<td><p>Inflow</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="row-even"><td><p>B</p></td>
-<td><p>PL, TP, Met</p></td>
-<td><p>Inflow</p></td>
-<td><p>5, 7</p></td>
-</tr>
-<tr class="row-odd"><td><p>C1a</p></td>
-<td><p>SL, PL, TP, Flux, Met</p></td>
-<td><p>Inter-farm</p></td>
-<td><p>1, 5, 7</p></td>
-</tr>
-<tr class="row-even"><td><p>D</p></td>
-<td><p>PL</p></td>
-<td><p>Inter-farm</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>E36</p></td>
-<td><p>PL, CLAMPS</p></td>
-<td><p>Inflow</p></td>
-<td><p>5, 7</p></td>
-</tr>
-<tr class="row-even"><td><p>G</p></td>
-<td><p>TP, Flux, Met, Tethersonde</p></td>
-<td><p>Intra-farm</p></td>
-<td><p>2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Golf Course</p></td>
-<td><p>CLAMPS</p></td>
-<td><p>Inter-farm</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>H</p></td>
-<td><p>SL, PL, TP, Ceil, Flux, Met, Rad, Prec, Radiosonde</p></td>
-<td><p>Downwind</p></td>
-<td><p>1, 5, 7</p></td>
-</tr>
-<tr class="row-odd"><td><p>Radar 1</p></td>
-<td><p>X-band radar</p></td>
-<td><p>All</p></td>
-<td><p>1, 3, 6</p></td>
-</tr>
-<tr class="row-even"><td><p>Radar 2</p></td>
-<td><p>X-band radar</p></td>
-<td><p>All</p></td>
-<td><p>1, 3, 6</p></td>
-</tr>
-<tr class="row-odd"><td><p>Turbine H05</p></td>
-<td><p>SL, Nacelle lidar, Loads, Prec</p></td>
-<td><p>Inflow</p></td>
-<td><p>2, 4, 6, 7</p></td>
-</tr>
-<tr class="row-even"><td><p>Turbine G02</p></td>
-<td><p>SL, Loads</p></td>
-<td><p>Intra-farm</p></td>
-<td><p>2, 4, 6, 7</p></td>
-</tr>
-<tr class="row-odd"><td><p>Turbine F04</p></td>
-<td><p>SL</p></td>
-<td><p>Intra-farm</p></td>
-<td><p>3, 4, 6</p></td>
-</tr>
-<tr class="row-even"><td><p>Turbine E06</p></td>
-<td><p>SL, Loads</p></td>
-<td><p>Downwind</p></td>
-<td><p>2, 4, 6, 7</p></td>
-</tr>
-<tr class="row-odd"><td><p>Turbine G06</p></td>
-<td><p>SL</p></td>
-<td><p>Intra-farm</p></td>
-<td><p>3, 4, 6</p></td>
-</tr>
-</tbody>
-</table>
-<p>Legend:</p>
-<ul class="simple">
-<li><p>SL - Scanning lidar</p></li>
-<li><p>PL - Profiling lidar</p></li>
-<li><p>TP - Thermodynamic profiler</p></li>
-<li><p>Ceil - Ceilometer</p></li>
-<li><p>Flux - Surface flux station</p></li>
-<li><p>Met - Meteorological station</p></li>
-<li><p>Rad - Radiation measurement</p></li>
-<li><p>Prec - Precipitation sensor</p></li>
-</ul>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Net capacity factors are calculated as an average from the annual net generation values reported by the U.S. EIA. (“Electricity plan level data for oklahoma,” <a class="reference external" href="https://www.eia.gov/opendata/v1/qb.php?category=902967">https://www.eia.gov/opendata/v1/qb.php?category=902967</a>, Last accessed on 2022-12-30.) Data for the first year reported by the EIA are not considered in the calculation.</p>
+</dd>
+</dl>
 </section>
 </section>
 
@@ -242,23 +131,28 @@
 
 <h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="timeline.html">Timeline</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testable_hypotheses.html">Testable Hypotheses</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Field Site</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="testable_hypotheses.html">AWAKEN Testable Hypotheses</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">AWAKEN Field Site and Wind Farms</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#arm-sgp">ARM SGP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#wind-plants">Wind Plants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#instrumentation">Instrumentation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="metabenchmark.html">Benchmark Template: Benchmark 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measurements.html">AWAKEN Measurements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="benchmark_1_farmwake.html">Benchmark 1: Wind Farm Wake</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase1.html">Phase 1: model calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase2.html">Phase 2: blind comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase3.html">Phase 3: iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="what_submit.html">What to submit where?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeline.html">Timeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="testable_hypotheses.html" title="previous chapter">Testable Hypotheses</a></li>
-      <li>Next: <a href="metabenchmark.html" title="next chapter">Benchmark Template: Benchmark 1</a></li>
+      <li>Previous: <a href="testable_hypotheses.html" title="previous chapter">AWAKEN Testable Hypotheses</a></li>
+      <li>Next: <a href="measurements.html" title="next chapter">AWAKEN Measurements</a></li>
   </ul></li>
 </ul>
 </div>
@@ -288,8 +182,8 @@
       &copy;2023, Aliza Abraham.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
       <a href="_sources/field_site.rst.txt"

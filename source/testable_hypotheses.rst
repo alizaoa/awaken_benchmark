@@ -1,7 +1,7 @@
 .. _testable_hypotheses:
 
-Testable Hypotheses
-===================
+AWAKEN Testable Hypotheses
+======================================
 
 By both observing and simulating the atmospheric boundary layer in the region within and around operational wind farms, the AWAKEN project aims to address several testable hypotheses, which were identified and prioritized at a technical experts meeting (Moriarty et al. 2020) and are listed here in order of decreasing priority:
 
@@ -36,6 +36,6 @@ By both observing and simulating the atmospheric boundary layer in the region wi
 
 |
 
-References
-----------
+More details can be found here:
+
 \P. Moriarty, N. Hamilton, M. Debnath, T. Herges, B. Isom, J. K. Lundquist, D. Maniaci, B. Naughton, R. Pauly, J. Roadman, W. Shaw, J. van Dam, and S. Wharton, “American WAKE experimeNt (AWAKEN),” Tech. Rep. NREL/TP-5000-75789 (National Renewable Energy Lab. (NREL), Golden, CO (United States), 2020).
