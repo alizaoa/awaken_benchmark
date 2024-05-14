@@ -13,12 +13,14 @@ The AWAKEN benchmarks
    field_site
    measurements
    benchmark_1_farmwake
+   signup
    phase1
    phase2
    phase3
    what_submit
    timeline 
    glossary
+   contact
 
 
 .. figure:: images/awaken-logo-color.png
@@ -31,12 +33,11 @@ Benchmarking phases
 
 For each benchmark, we envision three phases:
 
-1. Code calibration
-    Modelers will use inflow measurements to calibrate their code before the blind comparison
+1. The baseline
+    Modelers leverage the limited inputs and their own best practices to simulate the processes of interest.
 
-2. Blind comparison
-    - Code-to-code comparison: Simulation results from different models are compared without releasing the measurement data to identify potential errors in model configurations 
-    - Code-to-data comparison: Simulation results from all participants are compared to the measurement data to provide a first assessment of the accuracy of each simulation tool
+2. Model improvement with inflow observations
+    The participants leverage additional inflow observations and what learnt in Phase 1 to simulate the processes of interest.
 
-3. Iteration
-    Modelers can modify their model setup after performing model-measurement comparison to improve agreement
+3. Model improvement with inflow and wake observations
+    The participants leverage the additional wake observations and what learnt in Phase 2 to simulate the processes of interest.

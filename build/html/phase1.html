@@ -4,9 +4,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Phase 1: model calibration &#8212; AWAKEN Benchmarks 0.1 documentation</title>
+    <title>Phase 1: the baseline &#8212; AWAKEN Benchmarks 0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -16,8 +16,8 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Phase 2: blind comparison" href="phase2.html" />
-    <link rel="prev" title="Benchmark 1: Wind Farm Wake" href="benchmark_1_farmwake.html" />
+    <link rel="next" title="Phase 2: model improvement with inflow observations" href="phase2.html" />
+    <link rel="prev" title="Sign-up!" href="signup.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -34,9 +34,11 @@
 
           <div class="body" role="main">
             
-  <style> .red {color:red} </style><style> .blue {color:blue} </style><section id="phase-1-model-calibration">
-<h1>Phase 1: model calibration<a class="headerlink" href="#phase-1-model-calibration" title="Permalink to this heading">¶</a></h1>
-<p>In phase 1, modelers will use inflow measurements and other data sets to calibrate their simulation tool to match the observed inflow conditions.</p>
+  <style> .red {color:red} </style><style> .blue {color:blue} </style><section id="phase-1-the-baseline">
+<h1>Phase 1: the baseline<a class="headerlink" href="#phase-1-the-baseline" title="Permalink to this heading">¶</a></h1>
+<p>In Phase 1, the benchmark team releases LIMITED inflow observations at AWAKEN for 24 August 2023 and NREL’s open-source wind turbine model to the benchmark participants.
+The participants leverage the limited inputs and their own best practices to simulate the wakes from the King Plains and Armadillo Flats wind plants.
+The benchmark team then compares the simulated results with the observed values.</p>
 <p>Please read the instructions below in detail.</p>
 <p>Phase 1 officially starts on 28 May 2024. Participants are expected to submit results for Phase 1 (as specified below) by 1 September 2024.</p>
 <section id="model-inputs-and-recommendations">
@@ -45,14 +47,52 @@
 <ul class="simple">
 <li><dl class="simple">
 <dt>Recommended topographical data set</dt><dd><ul>
-<li><p>USGS 1⁄3 arc-sec Digital Elevation Models (DEMs) - USGS National Map 3DEP Downloadable Data Collection Retrieved from <a class="reference external" href="https://data.usgs.gov/datacatalog/data/USGS:3a81321b-c153-416f-98b7-cc8e5f0e17c3">https://data.usgs.gov/datacatalog/data/USGS:3a81321b-c153-416f-98b7-cc8e5f0e17c3</a>. We note that for mesoscale models coarser data sets can be used, such as the WRF default 30-sec data set.</p></li>
+<li><dl class="simple">
+<dt>USGS 1⁄3 arc-sec Digital Elevation Model (DEM) can be downloaded from the USGS website (<a class="reference external" href="https://data.usgs.gov/datacatalog/data/USGS:3a81321b-c153-416f-98b7-cc8e5f0e17c3">https://data.usgs.gov/datacatalog/data/USGS:3a81321b-c153-416f-98b7-cc8e5f0e17c3</a>). We note that for mesoscale models coarser data sets can be used, such as the WRF default 30-sec data set. Below, we provide a suggested step-by-step process on how to use the USGS data in WRF:</dt><dd><ul>
+<li><p>Download the s11_w041_1arc_v3.tif file from the link above</p></li>
+<li><p>In QGIS, Layer -&gt; Add Layer -&gt; Add Raster Layer; select the s11_w041_1arc_v3.tif file</p></li>
+<li><p>Using the GIS4WRF plugin, GIS4WRF -&gt; Datasets -&gt; Process -&gt; Convert active layer to WPS binary -&gt; Is this layer’s data categorical? (NO) -&gt; Save data</p></li>
+<li><p>Copy binaries and index files to a new directory, for instance, “topo_srtm_3s”</p></li>
+<li><p>Move “topo_srtm_3s” to the directory that stores WRF static datasets, which is usually WPS_GEOG</p></li>
+<li><p>Create the new terrain class “topo_srtn_1_3s” in GEOGRID.TBL</p></li>
+<li><dl class="simple">
+<dt>Select as an option in the WRF namelist.wps</dt><dd><p>geog_data_res = ‘topo_srtm_1_3s’</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
 <dt>Recommended land use data set</dt><dd><ul>
-<li><p>National Land Cover Dataset 1 arc-sec 2019, about 30 m spatial resolution, can be downloaded from <a class="reference external" href="https://doi.org/10.5066/P9KZCM54">https://doi.org/10.5066/P9KZCM54</a>. We note that WRF can use its default data base.</p></li>
+<li><dl class="simple">
+<dt>National Land Cover Dataset 1 arc-sec 2019, about 30 m spatial resolution, can be downloaded from <a class="reference external" href="https://www.sciencebase.gov/catalog/item/604a4fb1d34eb120311b0039">https://www.sciencebase.gov/catalog/item/604a4fb1d34eb120311b0039</a>. Below, we provide a suggested step-by-step process on how to use this data in WRF:</dt><dd><ul>
+<li><p>Download the nlcd_2019_land_cover_l48_20210604.zip file from the link above and extract data</p></li>
+<li><p>Import nlcd_2019_land_cover_l48_20210604.img into QGIS (Layer-&gt;Add-Layer-&gt;Raster-&gt;Source)</p></li>
+<li><p>Using the GIS4WRF plugin: Plugins-&gt;GIS4WRF-&gt;Datasets-&gt;Process-&gt;Convert active layer to WPS binary, and save it inside a folder named ‘nlcd2019_ll_1s’, for instance</p></li>
+<li><p>Move WPS binaries to the directory that stores WRF static datasets, which is usually WPS_GEOG</p></li>
+<li><p>The GEOGRID.TBL dictionary must create a new object (for example, with the name “nlcd20_1s”) that selects and points to the NLCD 2019 data; later on, this option should be selected in the namelist.wps</p></li>
+<li><p>The LANDUSE.TBL and VEGPARM.TBL dictionaries must create a new object (for example, with the name “NLCD20”) that contains a table that relates the land use categories with surface characteristics, such as roughness</p></li>
+<li><dl class="simple">
+<dt>The WRF namelist.wps should contain</dt><dd><p>geog_data_res = ‘nlcd20_1s’</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>The WRF namelist.input should contain</dt><dd><p>num_soil_layers = 4,
+num_land_cat = 20</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>
@@ -66,80 +106,89 @@
 </li>
 <li><dl class="simple">
 <dt>King Plain and Armadillo Flats turbine locations and dimensions</dt><dd><ul>
-<li><p>Can be downloaded from <a class="reference external" href="https://app.box.com/s/ho2cf03d1blytt4ga80spnv3uz87tepu">here</a>. Note: the USGS wind turbine data base information about these two wind farms are NOT accurate.</p></li>
+<li><p>Can be downloaded <a class="reference external" href="https://app.box.com/s/3mkdtxqmwtg5bhzl6tcahultb60t9lz6">here</a>. Note: the USGS wind turbine data base information about these two wind farms are NOT accurate.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
 <dt>Wind turbine model</dt><dd><ul>
-<li><p>The turbines in the King Plains and Armadillo Flats wind farms are of three different models, as detailed in <a class="reference internal" href="field_site.html"><span class="doc">AWAKEN Field Site and Wind Farms</span></a>. For each of the three turbine types, we provide an open-source turbine model, including Cp and Ct curves, RPM table, pitch table, lift and drag table. The open-source model can be found at <a class="reference external" href="https:/github.com/NREL/openfast-turbine-models">https:/github.com/NREL/openfast-turbine-models</a>. A report describing the model is available here.</p></li>
+<li><p>The turbines in the King Plains and Armadillo Flats wind farms are of three different models, as detailed in <a class="reference internal" href="field_site.html"><span class="doc">AWAKEN Field Site and Wind Farms</span></a>. For each of the three turbine types, we provide an open-source turbine model, including Cp and Ct curves, RPM table, pitch table, lift and drag table. The open-source model and documentation on how to use it can be found <a class="reference external" href="https:/github.com/NREL/openfast-turbine-models">here</a>.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>SCADA</dt><dd><ul>
-<li><p>TBD</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Recommended reanalysis product</dt><dd><ul>
-<li><p>TBD</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Observed inflow wind speed, wind direction, and turbulence profiles</dt><dd><ul>
-<li><p>10-minute average retrievals of wind speed, wind direction, three wind speed components, TI, and TKE are provided from the scanning lidars at sites A1 and A2. Data are provided every 10 m from 110 m to 4000 m a.g.l.</p></li>
-<li><p>4-s instantaneous retrievals of wind speed, wind direction, and the three wind components are provided from the scanning lidars at sites A1 and A2. Data are provided every 10 m from 110 m to 4000 m a.g.l.</p></li>
-<li><p>10-minute average retrievals of wind speed, wind direction, vertical wind speed are provided from the scanning lidar at site E36. Data are provided every 10 m from 98 m to over 10,000 m a.g.l.</p></li>
-<li><p>10-minute average and 1-second retrievals of horizontal wind speed, wind direction, vertical wind speed (and, for the 1-s data, two horizontal wind components) are provided from the profiling lidar at site B. Data are provided every 20 m from 40 m to 300 m a.g.l.</p></li>
+<dt>Observed inflow wind speed, wind direction, and turbulence. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul>
 <li><p>10-minute average and 1-second retrievals of horizontal wind speed, wind direction, vertical wind speed (and, for the 1-s data, two horizontal wind components) are provided from the profiling lidar at site A1. Data are provided every 20 m from 40 m to 240 m a.g.l.</p></li>
-<li><p>2-minute average retrievals of horizontal wind speed, wind direction, vertical wind speed are provided from the profiling lidar at site A2. Data are provided every 20 m from 40 m to 220 m a.g.l.</p></li>
-<li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/4vvnfbf5kg0w9uvf6xkeo35j1bxcurt6">here</a>.</p></li>
-<li><p><a class="reference external" href="https://app.box.com/s/8gf7qhs9iakp11pw02c9g3t01ebvxp6z">this</a> python script can be used as an example to access and explore these data sets.</p></li>
+<li><p>10-minute average retrievals of TI and TKE are provided from the scanning lidar at site A1. Data are provided at 110 m a.g.l.</p></li>
+<li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/o6xh24i0liygn10eh6duup4spd7pxcvu">here</a>.</p></li>
+<li><p><a class="reference external" href="https://app.box.com/s/3llpu1nybakz9g73gnr29ox3jg4wvbs5">this</a> python script can be used as an example to access and explore these data sets.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Observed inflow temperature profiles</dt><dd><ul>
-<li><p>30-minute average temperature profiles from the surface up to over 15 km (at varying vertical resolution) from the ASSIST-II at site B.</p></li>
-<li><p>10-minute average temperature profiles from the surface up to over 15 km (at varying vertical resolution) from the ASSIST-II at site E36. Data are not available after 14 UTC.</p></li>
-<li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/3uifnj5690yitzc5ipltc7hlg3j18lnk">here</a>.</p></li>
-<li><p><a class="reference external" href="https://app.box.com/s/zukgw131xpsqr4bbz5iphwtmdw3t85jb">this</a> python script can be used as an example to access and explore these data sets.</p></li>
+<dt>Observed inflow temperature. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul>
+<li><p>30-minute average temperature profiles at the surface from the ASSIST-II at site B.</p></li>
+<li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/c6m0o6nwkkp937rq4pxz5c2y0j2rg2c9">here</a>.</p></li>
+<li><p><a class="reference external" href="https://app.box.com/s/maluixmdg8739xru9x5usf9hbh1euxm4">this</a> python script can be used as an example to access and explore this data set.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Observed inflow near-surface properties (wind speed, wind direction, u, v, w wind components, sonic temperature, sensible heat flux, friction velocity, TKE, Obukhov length)</dt><dd><ul>
-<li><p>30-minute average time series at 4 m a.g.l. from sonic anemometers at sites A1, A2, and A5.</p></li>
-<li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/g9voxn84yw9bw1coxp5h2hz0muafj1af">here</a>.</p></li>
-<li><p><a class="reference external" href="https://app.box.com/s/0o2aynluyi9wg4zt6evml4n1et7fxkvr">this</a> python script can be used as an example to access and explore these data sets.</p></li>
+<dt>Observed inflow Obukhov length. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul>
+<li><p>30-minute average time series at 4 m a.g.l. from sonic anemometers at site A1.</p></li>
+<li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/ljbkhynxlhltc15vifrd3ava4van9pgq">here</a>.</p></li>
+<li><p><a class="reference external" href="https://app.box.com/s/zwr18vq18b756l3w3j8uoly44s52uvqk">this</a> python script can be used as an example to access and explore this data set.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
 <p>More details about the observations can be found in the <a class="reference internal" href="measurements.html#measurements"><span class="std std-ref">Measurements</span></a> page.</p>
-<p>We note the following:</p>
-<ul class="simple">
-<li><p>all inflow observations are provided in netcdf format. This python script can be used as an example to open and visualize some of the inflow files.</p></li>
-<li><p>participants are encouraged to make their own decisions about which inflow data set(s) to use to force their simulations. The results about the ‘best’ inflow data sets to use will be part of the overall results of the benchmark.</p></li>
-<li><p>connected to the above, please refer to this presentation to visualize some of the differences in the provided inflow observations among different AWAKEN sites.</p></li>
-<li><p>any parameters not listed above are left to the decisions of the single participants.</p></li>
-</ul>
+<p>We note that any parameters not listed above are left to the decisions of each participant.</p>
 </section>
 <section id="phase-1-submission">
 <h2>Phase 1 submission<a class="headerlink" href="#phase-1-submission" title="Permalink to this heading">¶</a></h2>
-<p>Benchmark participants are required to submit the following by 1 September 2024:</p>
-<p>Format
-Script to test format</p>
+<p>Benchmark participants are required to submit the following FOUR files by 1 September 2024:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>ONE .txt file with model setup information:</dt><dd><ul>
+<li><p>domain extension</p></li>
+<li><p>3D grid resolution</p></li>
+<li><p>temporal resolution</p></li>
+<li><p>other model setup choices (e.g., PBL scheme in WRF)</p></li>
+<li><p>any assumed constants used to run the model (e.g., roughness)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>ONE .netCDF file with modeled atmospheric inflow. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/nf4x11ubp20a00qntbexp4ukcfgzsb61">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. Please interpolate your simulated data to match the heights listed below whenever reasonable (e.g., if your simulated domain extends to 2 km a.g.l., DO NOT guess/extrapolate any values above that). NaNs should be used anytime simulated data are not available or cannot be interpolated. You can see the coordinates of the AWAKEN sites in the <a class="reference internal" href="measurements.html#measurements"><span class="std std-ref">Measurements</span></a> page.</dt><dd><ul>
+<li><p>Time series of 30-minute average wind speed, wind direction, TKE, Obukhov length and friction velocity (u*) at sites A1, A2, and A5 at 4 m a.g.l..</p></li>
+<li><p>Time series of 10-minute average horizontal wind speed, vertical wind speed, wind direction, TI, and TKE at sites A1, A2, B, and E36 every 10 m from 40 m through 4000 m a.g.l..</p></li>
+<li><p>Time series of 10-minute average temperature at sites B and E36 at the following heights: [0, 10, 21, 33, 46, 61, 77, 95, 114, 136, 159, 185, 214, 245, 280, 318, 359, 405, 456, 512, 573, 640, 714, 795, 885, 983, 1092, 1211, 1342, 1486, 1645, 1819, 2011, 2223, 2455, 2710, 2991, 3300, 3640, 4014] m a.g.l..</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>ONE .netCDF file with modeled turbine response. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/vs2h194c2z2alktwgivzjt1ain4nstle">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.</dt><dd><ul>
+<li><p>Time series of 10-minute average hub-height (80 m or 88.5 m, see heights for various turbines in the spreadsheet linked above) wind speed at the locations (see coordinates in spreadsheet linked above) of all the Armadillo Flats and King Plains turbines.</p></li>
+<li><p>Time series of 10-minute average power produced by each of the Armadillo Flats and King Plains turbines.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>ONE .netCDF file with modeled wake. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/mrjd4om1ffh29d695dqaedyy97b3c9o4">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.</dt><dd><p>MORE DETAILS TO COME</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Each participant should submit the FOUR files (one .txt file, three .netCDF files) in the Box folder communicated to each participant at the beginning of the benchmark. For any question about the result submission, please email <a class="reference external" href="mailto:nicola&#46;bodini&#37;&#52;&#48;nrel&#46;gov">nicola<span>&#46;</span>bodini<span>&#64;</span>nrel<span>&#46;</span>gov</a>.</p>
 </section>
 </section>
 
@@ -165,24 +214,26 @@ Script to test format</p>
 <li class="toctree-l1"><a class="reference internal" href="field_site.html">AWAKEN Field Site and Wind Farms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="measurements.html">AWAKEN Measurements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="benchmark_1_farmwake.html">Benchmark 1: Wind Farm Wake</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Phase 1: model calibration</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="signup.html">Sign-up!</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Phase 1: the baseline</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#model-inputs-and-recommendations">Model inputs and recommendations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#phase-1-submission">Phase 1 submission</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="phase2.html">Phase 2: blind comparison</a></li>
-<li class="toctree-l1"><a class="reference internal" href="phase3.html">Phase 3: iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase2.html">Phase 2: model improvement with inflow observations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase3.html">Phase 3: model improvement with inflow and wake observations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="what_submit.html">What to submit where?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="timeline.html">Timeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="benchmark_1_farmwake.html" title="previous chapter">Benchmark 1: Wind Farm Wake</a></li>
-      <li>Next: <a href="phase2.html" title="next chapter">Phase 2: blind comparison</a></li>
+      <li>Previous: <a href="signup.html" title="previous chapter">Sign-up!</a></li>
+      <li>Next: <a href="phase2.html" title="next chapter">Phase 2: model improvement with inflow observations</a></li>
   </ul></li>
 </ul>
 </div>

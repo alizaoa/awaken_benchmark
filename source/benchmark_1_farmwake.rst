@@ -21,7 +21,7 @@ Benchmark 1: Wind Farm Wake
 Case Study
 ----------------------
 
-The goal of this benchmark is to simulate the area around the King Plains and Armadillo Flats wind farms on 24 August 2023. As stated above, the size of the modeling domain is left to the participants, however, we recommend to include both wind farms to be able to capture their interaction during the day to simulate.
+The goal of this benchmark is to simulate the area around the King Plains and Armadillo Flats wind farms on 24 August 2023. The size of the modeling domain is left to the participants, however, we recommend to include both wind farms to be able to capture their interaction during the day to simulate.
 
 The figure below shows the observed wind speed, wind direction and lidar-derived TKE at AWAKEN site A1 on the selected case study. The vertical dashed lines show local sunset (left) and sunrise (right).
 
@@ -61,7 +61,7 @@ Simulation Tools
 
 All simulation tools are welcome to participate in this benchmark. This includes, but it is not limited to:
 
-- Mesoscale models
+- Mesoscale models, with different wind farm parameterizations
 - Steady-state analytical models
 - Dynamic wake meandering-type models
 - Engineering models
@@ -72,21 +72,11 @@ All simulation tools are welcome to participate in this benchmark. This includes
 Guidelines
 -----------------------
 
-- Participation in the benchmark is open to all participants of IEA Wind Task 57 “JAM”.
+- Participation in the benchmark is open to participants from countries that are part of the IEA Wind Task 57 “JAM”. Please contact paula.doubrawa@nrel.gov for further information about this.
 - Simulation tools should be used to the limit of their capabilities. 2D, steady-state solutions will be accepted for low-fidelity models. 3D, time-varying solutions will be expected from mid-to-high fidelity models.
-- The choice of domain size, grid spacing, timestep, and other model configuration parameters is left to the discretion of the participants.
+- The choice of domain size, grid spacing, time step, and other model configuration parameters is left to the discretion of the participants.
 - Multi-model benchmark results will be published in journal article and co-authored by all participants who choose to release their results and participate in the publication effort.
 - All provided results must observe the variable definitions and units as explicitly defined in the :ref:`glossary<glossary>`.
-
-
-Coordinate System
------------------------------
-
-All benchmark analyses should use a coordinate system centered on King Plains' turbine H05 (lat = 36.364708, lon = -97.405487), with the x-axis following longitude, and the y-axis following latitude, as shown in the image below:
-
-.. figure:: images/coordinate_system.png
-
-Z (vertical height) should be calculated in meters above the terrain.
 
 
 Team

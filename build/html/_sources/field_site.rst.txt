@@ -33,4 +33,6 @@ Five wind plants south of the central SGP facility comprise the AWAKEN field cam
 | King Plains     | 2020                    | 88                 | GE 2.82 MW (127 m, 89 m)                   | 0.37                     |
 +-----------------+-------------------------+--------------------+--------------------------------------------+--------------------------+
 
+More details (lat, lon, hub height, rotor diameter) about the turbines of Armadillo Flats and King Plains are available `here <https://app.box.com/s/3mkdtxqmwtg5bhzl6tcahultb60t9lz6>`_.
+
 .. [#] Net capacity factors are calculated as an average from the annual net generation values reported by the U.S. EIA. (“Electricity plan level data for oklahoma,” https://www.eia.gov/opendata/v1/qb.php?category=902967, Last accessed on 2022-12-30.) Data for the first year reported by the EIA are not considered in the calculation.
