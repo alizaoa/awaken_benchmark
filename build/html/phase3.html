@@ -4,9 +4,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Phase 3: iteration &#8212; AWAKEN Benchmarks 0.1 documentation</title>
+    <title>Phase 3: model improvement with inflow and wake observations &#8212; AWAKEN Benchmarks 0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -17,7 +17,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="What to submit where?" href="what_submit.html" />
-    <link rel="prev" title="Phase 2: blind comparison" href="phase2.html" />
+    <link rel="prev" title="Phase 2: model improvement with inflow observations" href="phase2.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -34,9 +34,58 @@
 
           <div class="body" role="main">
             
-  <style> .red {color:red} </style><style> .blue {color:blue} </style><section id="phase-3-iteration">
-<h1>Phase 3: iteration<a class="headerlink" href="#phase-3-iteration" title="Permalink to this heading">¶</a></h1>
-<p>Details will be posted in future months.</p>
+  <style> .red {color:red} </style><style> .blue {color:blue} </style><section id="phase-3-model-improvement-with-inflow-and-wake-observations">
+<h1>Phase 3: model improvement with inflow and wake observations<a class="headerlink" href="#phase-3-model-improvement-with-inflow-and-wake-observations" title="Permalink to this heading">¶</a></h1>
+<p>In Phase 3, the team releases ALL the wake observations and ALL SCADA to the benchmark participants.
+The participants leverage the additional inputs and what learnt in Phase 2 to simulate the wakes from the King Plains and Armadillo Flats wind plants.
+The benchmark team then compares the simulated results with the observed values and summarizes results in a journal article.</p>
+<p>Please read the instructions below in detail.</p>
+<p>Phase 3 officially starts in January 2025, when results from Phase 2 are released. Participants are expected to submit results for Phase 3 (as specified below) by 15 March 2025.</p>
+<section id="model-inputs-and-recommendations">
+<h2>Model inputs and recommendations<a class="headerlink" href="#model-inputs-and-recommendations" title="Permalink to this heading">¶</a></h2>
+<p>The following inputs and recommendations are provided to the benchmark participants, on top of what has already been released in Phases 1 and 2:</p>
+<p>MORE DETAILS TO COME.</p>
+</section>
+<section id="phase-3-submission">
+<h2>Phase 3 submission<a class="headerlink" href="#phase-3-submission" title="Permalink to this heading">¶</a></h2>
+<p>Benchmark participants are required to submit the following FOUR files by 15 March 2025:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>ONE .txt file with model setup information:</dt><dd><ul>
+<li><p>domain extension</p></li>
+<li><p>3D grid resolution</p></li>
+<li><p>temporal resolution</p></li>
+<li><p>other model setup choices (e.g., PBL scheme in WRF)</p></li>
+<li><p>any assumed constants used to run the model (e.g., roughness)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>ONE .netCDF file with modeled atmospheric inflow. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/ho2cf03d1blytt4ga80spnv3uz87tepu">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. Please interpolate your simulated data to match the heights listed below whenever reasonable (e.g., if your simulated domain extends to 2 km a.g.l., DO NOT guess/extrapolate any values above that). NaNs should be used anytime simulated data are not available or cannot be interpolated. You can see the coordinates of the AWAKEN sites in the <a class="reference internal" href="measurements.html#measurements"><span class="std std-ref">Measurements</span></a> page.</dt><dd><ul>
+<li><p>Time series of 30-minute average wind speed, wind direction, TKE, Obukhov length and friction velocity (u*) at sites A1, A2, and A5 at 4 m a.g.l..</p></li>
+<li><p>Time series of 10-minute average horizontal wind speed, vertical wind speed, wind direction, TI, and TKE at sites A1, A2, B, and E36 every 10 m from 40 m through 4000 m a.g.l..</p></li>
+<li><p>Time series of 10-minute average temperature at sites B and E36 at the following heights: [0, 10, 21, 33, 46, 61, 77, 95, 114, 136, 159, 185, 214, 245, 280, 318, 359, 405, 456, 512, 573, 640, 714, 795, 885, 983, 1092, 1211, 1342, 1486, 1645, 1819, 2011, 2223, 2455, 2710, 2991, 3300, 3640, 4014] m a.g.l..</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>ONE .netCDF file with modeled turbine response. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/ho2cf03d1blytt4ga80spnv3uz87tepu">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.</dt><dd><ul>
+<li><p>Time series of 10-minute average hub-height (80 m or 88.5 m, see heights for various turbines in the spreadsheet linked above) wind speed at the locations (see coordinates in spreadsheet linked above) of all the Armadillo Flats and King Plains turbines.</p></li>
+<li><p>Time series of 10-minute average power produced by each of the Armadillo Flats and King Plains turbines.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>ONE .netCDF file with modeled wake. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/ho2cf03d1blytt4ga80spnv3uz87tepu">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.</dt><dd><p>MORE DETAILS TO COME</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Each participant should submit the FOUR files (one .txt file, three .netCDF files) in the Box folder communicated to each participant at the beginning of the benchmark. For any question about the result submission, please email <a class="reference external" href="mailto:nicola&#46;bodini&#37;&#52;&#48;nrel&#46;gov">nicola<span>&#46;</span>bodini<span>&#64;</span>nrel<span>&#46;</span>gov</a>.</p>
+</section>
 </section>
 
 
@@ -61,9 +110,14 @@
 <li class="toctree-l1"><a class="reference internal" href="field_site.html">AWAKEN Field Site and Wind Farms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="measurements.html">AWAKEN Measurements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="benchmark_1_farmwake.html">Benchmark 1: Wind Farm Wake</a></li>
-<li class="toctree-l1"><a class="reference internal" href="phase1.html">Phase 1: model calibration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="phase2.html">Phase 2: blind comparison</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Phase 3: iteration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signup.html">Sign-up!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase1.html">Phase 1: the baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase2.html">Phase 2: model improvement with inflow observations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Phase 3: model improvement with inflow and wake observations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#model-inputs-and-recommendations">Model inputs and recommendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#phase-3-submission">Phase 3 submission</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="what_submit.html">What to submit where?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="timeline.html">Timeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
@@ -73,7 +127,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="phase2.html" title="previous chapter">Phase 2: blind comparison</a></li>
+      <li>Previous: <a href="phase2.html" title="previous chapter">Phase 2: model improvement with inflow observations</a></li>
       <li>Next: <a href="what_submit.html" title="next chapter">What to submit where?</a></li>
   </ul></li>
 </ul>
