@@ -6,7 +6,7 @@ AWAKEN Measurements
 Overview
 ---------------
 
-.. figure:: images/instrument_sites.pdf
+.. figure:: images/instrument_sites.png
 
 *Figure: Map of the AWAKEN field sites (yellow stars) and the five instrumented turbines (yellow circles). The blue triangle is the pre-existing King Plains meteorological tower.*
 

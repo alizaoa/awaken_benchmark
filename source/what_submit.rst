@@ -23,7 +23,7 @@ What to submit where?
 Where should I upload my simulation results to?
 ________________________________________________
 
-If you signed up, you should have received a link to a private Box folder hosted at NREL. Please upload all of your results to that folder, respecting the requested file naming convention which is detailed in the pages that describe the phases of the benchmark exercise.
+If you signed up to the benchmark, you should have received a link to a private Box folder hosted at NREL. Please upload all of your results to that folder, respecting the requested file naming convention which is detailed in the pages that describe the phases of the benchmark exercise.
 
 
 What should I upload?
