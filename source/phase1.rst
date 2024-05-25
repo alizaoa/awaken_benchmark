@@ -64,7 +64,7 @@ The following inputs and recommendations are provided to the benchmark participa
     - Can be downloaded `here <https://app.box.com/s/3mkdtxqmwtg5bhzl6tcahultb60t9lz6>`_. Note: the USGS wind turbine data base information about these two wind farms are NOT accurate.
 
 - Wind turbine model
-    - The turbines in the King Plains and Armadillo Flats wind farms are of four different models, as detailed in :doc:`field_site`. For each of the four turbine types, we provide an open-source turbine model, including Cp and Ct curves, RPM table, pitch table, lift and drag table. The open-source model and documentation on how to use it can be found `here <https://github.com/NREL/openfast-turbine-models>`_.
+    - The turbines in the King Plains and Armadillo Flats wind farms are of four different models, as detailed in :doc:`field_site`. For each of the four turbine types, we provide an open-source turbine model, including Cp and Ct curves, RPM table, pitch table, lift and drag table. The open-source model and documentation on how to use it can be found `here <https://github.com/NREL/openfast-turbine-models>`_. NOTE: at the moment, only one turbine model (2.82 MW turbine) is available. The remaining three models are in their final stages of testing, and we expect to release them very soon.
 
 - Observed inflow wind speed, wind direction, and turbulence. Data also include the day before (23 August 2023) the selected case study if needed.
     - 10-minute average and 1-second retrievals of horizontal wind speed, wind direction, vertical wind speed (and, for the 1-s data, two horizontal wind components) are provided from the profiling lidar at site A1. Data are provided every 20 m from 40 m to 240 m a.g.l.
