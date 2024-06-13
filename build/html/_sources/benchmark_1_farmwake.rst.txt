@@ -15,13 +15,17 @@
 .. role:: blue
 
 
-Benchmark 1: Wind Farm Wake
+Benchmark 1: Wakes, Diurnal Cycle
 ================================
 
 Case Study
 ----------------------
 
 The goal of this benchmark is to simulate the area around the King Plains and Armadillo Flats wind farms on 24 August 2023. The size of the modeling domain is left to the participants, however, we recommend to include both wind farms to be able to capture their interaction during the day to simulate.
+
+IF the above is not possible, we recommend participants to focus on the region in the map below, to maximize chances for a valuable comparison across models.
+
+.. figure:: images/limited_domain.png
 
 The figure below shows the observed wind speed, wind direction and lidar-derived TKE at AWAKEN site A1 on the selected case study. The vertical dashed lines show local sunset (left) and sunrise (right).
 
@@ -33,7 +37,7 @@ Validation Objectives
 
 The goal of this benchmark is to evaluate the models' ability to accurately capture:
 
-- Wind farm wake characteristics
+- Wake (at both farm and turbine levels) characteristics
     - Momentum deficit
     - Turbulence increase
 

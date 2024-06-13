@@ -33,11 +33,11 @@
             
   <style> .red {color:red} </style><style> .blue {color:blue} </style><section id="phase-1-the-baseline">
 <h1>Phase 1: the baseline<a class="headerlink" href="#phase-1-the-baseline" title="Permalink to this heading">¶</a></h1>
-<p>In Phase 1, the benchmark team releases LIMITED inflow observations at AWAKEN for 24 August 2023 and NREL’s open-source wind turbine model to the benchmark participants.
+<p>In Phase 1, the benchmark team releases LIMITED inflow observations at AWAKEN for 24 August 2023 (and the day before, if needed to start the simulations) and NREL’s open-source wind turbine model to the benchmark participants.
 The participants leverage the limited inputs and their own best practices to simulate the wakes from the King Plains and Armadillo Flats wind plants.
 The benchmark team then compares the simulated results with the observed values.</p>
 <p>Please read the instructions below in detail.</p>
-<p>Phase 1 officially starts on 28 May 2024. Participants are expected to submit results for Phase 1 (as specified below) by 1 September 2024.</p>
+<p>Phase 1 officially started on 28 May 2024. Participants are expected to submit results for Phase 1 (as specified below) by 1 September 2024.</p>
 <section id="model-inputs-and-recommendations">
 <h2>Model inputs and recommendations<a class="headerlink" href="#model-inputs-and-recommendations" title="Permalink to this heading">¶</a></h2>
 <p>The following inputs and recommendations are provided to the benchmark participants:</p>
@@ -110,7 +110,7 @@ num_land_cat = 20</p>
 </li>
 <li><dl class="simple">
 <dt>Wind turbine model</dt><dd><ul>
-<li><p>The turbines in the King Plains and Armadillo Flats wind farms are of three different models, as detailed in <a class="reference internal" href="field_site.html"><span class="doc">AWAKEN Field Site and Wind Farms</span></a>. For each of the three turbine types, we provide an open-source turbine model, including Cp and Ct curves, RPM table, pitch table, lift and drag table. The open-source model and documentation on how to use it can be found <a class="reference external" href="https://github.com/NREL/openfast-turbine-models">here</a>.</p></li>
+<li><p>The turbines in the King Plains and Armadillo Flats wind farms are of four different models, as detailed in <a class="reference internal" href="field_site.html"><span class="doc">AWAKEN Field Site and Wind Farms</span></a>. For each of the four turbine types, we provide an open-source turbine model, including Cp and Ct curves, RPM table, pitch table, lift and drag table. The open-source model and documentation on how to use it can be found <a class="reference external" href="https://github.com/NREL/openfast-turbine-models">here</a>. NOTE: at the moment, only one turbine model (2.82 MW turbine) is available. The remaining three models are in their final stages of testing, and we expect to release them very soon.</p></li>
 </ul>
 </dd>
 </dl>
@@ -163,18 +163,18 @@ num_land_cat = 20</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>ONE .netCDF file with modeled atmospheric inflow. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/nf4x11ubp20a00qntbexp4ukcfgzsb61">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. Please interpolate your simulated data to match the heights listed below whenever reasonable (e.g., if your simulated domain extends to 2 km a.g.l., DO NOT guess/extrapolate any values above that). NaNs should be used anytime simulated data are not available or cannot be interpolated. You can see the coordinates of the AWAKEN sites in the <a class="reference internal" href="measurements.html#measurements"><span class="std std-ref">Measurements</span></a> page.</dt><dd><ul>
-<li><p>Time series of 30-minute average wind speed, wind direction, TKE, Obukhov length and friction velocity (u*) at sites A1, A2, and A5 at 4 m a.g.l..</p></li>
-<li><p>Time series of 10-minute average horizontal wind speed, vertical wind speed, wind direction, TI, and TKE at sites A1, A2, B, and E36 every 10 m from 40 m through 4000 m a.g.l..</p></li>
-<li><p>Time series of 10-minute average temperature at sites B and E36 at the following heights: [0, 10, 21, 33, 46, 61, 77, 95, 114, 136, 159, 185, 214, 245, 280, 318, 359, 405, 456, 512, 573, 640, 714, 795, 885, 983, 1092, 1211, 1342, 1486, 1645, 1819, 2011, 2223, 2455, 2710, 2991, 3300, 3640, 4014] m a.g.l..</p></li>
+<dt>ONE .netCDF file with modeled atmospheric inflow. The .netCDF file template to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/nf4x11ubp20a00qntbexp4ukcfgzsb61">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. Please interpolate your simulated data to match the heights listed below whenever reasonable (e.g., if your simulated domain extends to 2 km a.g.l., DO NOT guess/extrapolate any values above that). NaNs should be used anytime simulated data are not available (e.g., a model with output available at 2-minute resolution would have 119 NaNs and only 1 value for every 2-minute period in the template) or cannot be interpolated. You can see the coordinates of the AWAKEN sites in the <a class="reference internal" href="measurements.html#measurements"><span class="std std-ref">Measurements</span></a> page.</dt><dd><ul>
+<li><p>Time series of 1-s wind speed, wind direction, TKE, Obukhov length and friction velocity (u*) at sites A1, A2, and A5 at 4 m a.g.l..</p></li>
+<li><p>Time series of 1-s horizontal wind speed, vertical wind speed, wind direction, TI, and TKE at sites A1, A2, B, and E36 every 10 m from 40 m through 4000 m a.g.l..</p></li>
+<li><p>Time series of 1-s temperature at sites B and E36 at the following heights: [0, 10, 21, 33, 46, 61, 77, 95, 114, 136, 159, 185, 214, 245, 280, 318, 359, 405, 456, 512, 573, 640, 714, 795, 885, 983, 1092, 1211, 1342, 1486, 1645, 1819, 2011, 2223, 2455, 2710, 2991, 3300, 3640, 4014] m a.g.l..</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
 <dt>ONE .netCDF file with modeled turbine response. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/vs2h194c2z2alktwgivzjt1ain4nstle">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.</dt><dd><ul>
-<li><p>Time series of 10-minute average hub-height (80 m or 88.5 m, see heights for various turbines in the spreadsheet linked above) wind speed at the locations (see coordinates in spreadsheet linked above) of all the Armadillo Flats and King Plains turbines.</p></li>
-<li><p>Time series of 10-minute average power produced by each of the Armadillo Flats and King Plains turbines.</p></li>
+<li><p>Time series of 1-s hub-height (80 m, 88.5 m, or 90 m a.g.l., see heights for various turbines in the spreadsheet linked above) wind speed at the locations (see coordinates in spreadsheet linked above) of all the Armadillo Flats and King Plains turbines.</p></li>
+<li><p>Time series of 1-s power produced by each of the Armadillo Flats and King Plains turbines.</p></li>
 </ul>
 </dd>
 </dl>
@@ -210,7 +210,7 @@ num_land_cat = 20</p>
 <li class="toctree-l1"><a class="reference internal" href="testable_hypotheses.html">AWAKEN Testable Hypotheses</a></li>
 <li class="toctree-l1"><a class="reference internal" href="field_site.html">AWAKEN Field Site and Wind Farms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="measurements.html">AWAKEN Measurements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="benchmark_1_farmwake.html">Benchmark 1: Wind Farm Wake</a></li>
+<li class="toctree-l1"><a class="reference internal" href="benchmark_1_farmwake.html">Benchmark 1: Wakes, Diurnal Cycle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="signup.html">Sign-up!</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Phase 1: the baseline</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#model-inputs-and-recommendations">Model inputs and recommendations</a></li>

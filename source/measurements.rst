@@ -91,7 +91,34 @@ Atmospheric inflow measurements (sites A1, A2, A5, B, E36)
     - **Thermodynamic profiler**: ASSIST-II profiler, from which temperature has been retrieved using the TROPoe algorithm developed by Dave Turner (NOAA) et al.. For the instrument at site E36, data are available at 10-minute resolution, from the ground up to over 15 km, at varying vertical resolution. Data are only available until 14 UTC on 24 August 2023.
 
 
-Wake measurements (sites C1a, Golf Course, H, Turbine E06)
+Wake measurements (sites C1a, G, Golf Course, H, Turbine E06)
 ------------------------------------------------------------
 
+- **Site C1a** (GPS coordinates: 36°21'41.8"N 97°30'36.1"W)
+    - **Scanning lidar 1**: DATA ARE UNDERGOING QC -- DETAILS WILL BE POSTED LATER.
+    - **Scanning lidar 2**: DATA ARE UNDERGOING QC -- DETAILS WILL BE POSTED LATER.
+    - **Profiling lidar**: a Windcube v1 profiling lidar is deployed at this site. The lidar uses a DBS, 4-beam approach. We provide a vertical profile of horizontal wind speed and the vertical component of the wind. One full profile takes about 4 s to complete. Here, data are provided every 2 minutes, and at every 20 m from 40 m up to 220 m a.g.l.. Data from this lidar have been QCed using a simple CNR threshold (-22 dB). We also note that data from this lidar are only available from 02-19 UTC on 23 August 2023 and 02-18 UTC on 24 August 2023.
+    - **Thermodynamic profiler**: ASSIST-II profiler, from which temperature has been retrieved using the TROPoe algorithm developed by Dave Turner (NOAA). For the instrument at site G, data are available at 30-minute resolution, from the ground up to over 15 km, at varying vertical resolution.
+    - **Sonic anemometer**: DATA ARE UNDERGOING QC -- DETAILS WILL BE POSTED LATER.
+
+- **Site G** (GPS coordinates: 36°23'58.1"N 97°24'28.9"W)
+    - **Thermodynamic profiler**: ASSIST-II profiler, from which temperature has been retrieved using the TROPoe algorithm developed by Dave Turner (NOAA). For the instrument at site G, data are available at 30-minute resolution, from the ground up to over 15 km, at varying vertical resolution.
+    - **Sonic anemometer**: Gill R3-50, omnidirectional mounted on top of a 4-meter tripod. We provide QCed, 30-min average values of wind speed, wind direction, u, v, w wind components, sonic temperature, sensible heat flux, friction velocity, TKE, Obukhov length. The turbulent fluxes and corresponding statistics were estimated from 30-minute raw data using software initially developed for ARM ECOR systems.
+
+- **Site Golf Course** (GPS coordinates: 36°22'47.09"N 97°31'24.51"W)
+    - **Scanning lidar**: a Halo Photonics Streamline XR scanning lidar is deployed at this site as part of the CLAMPS module. We provide 10-minute average vertical profiles of wind speed (and vertical velocity) from this lidar. Because of the lidar blind zone, the lowest elevation with good quality data is 98.6 m a.g.l. Data are provided every 28 m up to over 10 km. Data from this lidar have been QCed using a simple CNR threshold (-23 dB).
+    - **Thermodynamic profiler**: ASSIST-II profiler, from which temperature has been retrieved using the TROPoe algorithm developed by Dave Turner (NOAA). For the instrument at site E36, data are available at 10-minute resolution, from the ground up to over 15 km, at varying vertical resolution.
+
+- **Site H** (GPS coordinates: 36°26'12.7"N 97°24'27.9"W)
+    - **Profiling lidar**: a ZephIR300 profiling lidar is deployed at this site. The lidar uses a VAD, continuous wave multi-beam approach. One complete profile takes about 15-20 s to complete and the data are available as 10-minute averages and instantaneous values. We provide a vertical profile of horizontal wind speed, the vertical component of the wind, and (as 10-minute average only) lidar-derived TI. Here, data are provided at every 20 m from 40 m up to 220 m a.g.l..
+    - **Scanning lidar**: a Halo Photonics Streamline XR scanning lidar is deployed at this site. The lidar operates on a 30-min scanning strategy, which is then repeated. The first 20-min are used to perform regular 6-beam scans to derive the vertical profile of the wind speed. Each 6-beam scan lasts about 4 seconds. After each 20-min period, the lidar stares vertically for the remaining 10 minutes. Because of the lidar blind zone, the lowest elevation with good quality data is 110 m a.g.l. Data are provided every 10 m up to 4 km. Data from this lidar have been QCed using the lidar dynamic filter approach.
+    - **Sonic anemometer**: Gill R3-50, omnidirectional mounted on top of a 4-meter tripod. We provide QCed, 30-min average values of wind speed, wind direction, u, v, w wind components, sonic temperature, sensible heat flux, friction velocity, TKE, Obukhov length. The turbulent fluxes and corresponding statistics were estimated from 30-minute raw data using software initially developed for ARM ECOR systems.
+
+- **Turbine E06** (GPS coordinates: )
+    - **Scanning lidar**: DATA ARE UNDERGOING QC -- DETAILS WILL BE POSTED LATER.
+
+SCADA
+------------------------------------------------------------
+
+DETAILS WILL BE POSTED LATER
 

@@ -59,24 +59,24 @@ The benchmark team then compares the simulated results with the observed values 
 </dl>
 </li>
 <li><dl class="simple">
-<dt>ONE .netCDF file with modeled atmospheric inflow. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/ho2cf03d1blytt4ga80spnv3uz87tepu">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. Please interpolate your simulated data to match the heights listed below whenever reasonable (e.g., if your simulated domain extends to 2 km a.g.l., DO NOT guess/extrapolate any values above that). NaNs should be used anytime simulated data are not available or cannot be interpolated. You can see the coordinates of the AWAKEN sites in the <a class="reference internal" href="measurements.html#measurements"><span class="std std-ref">Measurements</span></a> page.</dt><dd><ul>
-<li><p>Time series of 30-minute average wind speed, wind direction, TKE, Obukhov length and friction velocity (u*) at sites A1, A2, and A5 at 4 m a.g.l..</p></li>
-<li><p>Time series of 10-minute average horizontal wind speed, vertical wind speed, wind direction, TI, and TKE at sites A1, A2, B, and E36 every 10 m from 40 m through 4000 m a.g.l..</p></li>
-<li><p>Time series of 10-minute average temperature at sites B and E36 at the following heights: [0, 10, 21, 33, 46, 61, 77, 95, 114, 136, 159, 185, 214, 245, 280, 318, 359, 405, 456, 512, 573, 640, 714, 795, 885, 983, 1092, 1211, 1342, 1486, 1645, 1819, 2011, 2223, 2455, 2710, 2991, 3300, 3640, 4014] m a.g.l..</p></li>
+<dt>ONE .netCDF file with modeled atmospheric inflow. The .netCDF file template to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/nf4x11ubp20a00qntbexp4ukcfgzsb61">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. Please interpolate your simulated data to match the heights listed below whenever reasonable (e.g., if your simulated domain extends to 2 km a.g.l., DO NOT guess/extrapolate any values above that). NaNs should be used anytime simulated data are not available (e.g., a model with output available at 2-minute resolution would have 119 NaNs and only 1 value for every 2-minute period in the template) or cannot be interpolated. You can see the coordinates of the AWAKEN sites in the <a class="reference internal" href="measurements.html#measurements"><span class="std std-ref">Measurements</span></a> page.</dt><dd><ul>
+<li><p>Time series of 1-s wind speed, wind direction, TKE, Obukhov length and friction velocity (u*) at sites A1, A2, and A5 at 4 m a.g.l..</p></li>
+<li><p>Time series of 1-s horizontal wind speed, vertical wind speed, wind direction, TI, and TKE at sites A1, A2, B, and E36 every 10 m from 40 m through 4000 m a.g.l..</p></li>
+<li><p>Time series of 1-s temperature at sites B and E36 at the following heights: [0, 10, 21, 33, 46, 61, 77, 95, 114, 136, 159, 185, 214, 245, 280, 318, 359, 405, 456, 512, 573, 640, 714, 795, 885, 983, 1092, 1211, 1342, 1486, 1645, 1819, 2011, 2223, 2455, 2710, 2991, 3300, 3640, 4014] m a.g.l..</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>ONE .netCDF file with modeled turbine response. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/ho2cf03d1blytt4ga80spnv3uz87tepu">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.</dt><dd><ul>
-<li><p>Time series of 10-minute average hub-height (80 m or 88.5 m, see heights for various turbines in the spreadsheet linked above) wind speed at the locations (see coordinates in spreadsheet linked above) of all the Armadillo Flats and King Plains turbines.</p></li>
-<li><p>Time series of 10-minute average power produced by each of the Armadillo Flats and King Plains turbines.</p></li>
+<dt>ONE .netCDF file with modeled turbine response. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/vs2h194c2z2alktwgivzjt1ain4nstle">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.</dt><dd><ul>
+<li><p>Time series of 1-s hub-height (80 m, 88.5 m, or 90 m a.g.l., see heights for various turbines in the spreadsheet linked above) wind speed at the locations (see coordinates in spreadsheet linked above) of all the Armadillo Flats and King Plains turbines.</p></li>
+<li><p>Time series of 1-s power produced by each of the Armadillo Flats and King Plains turbines.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>ONE .netCDF file with modeled wake. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/ho2cf03d1blytt4ga80spnv3uz87tepu">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.</dt><dd><p>MORE DETAILS TO COME</p>
+<dt>ONE .netCDF file with modeled wake. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/mrjd4om1ffh29d695dqaedyy97b3c9o4">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.</dt><dd><p>MORE DETAILS TO COME</p>
 </dd>
 </dl>
 </li>
@@ -106,7 +106,7 @@ The benchmark team then compares the simulated results with the observed values 
 <li class="toctree-l1"><a class="reference internal" href="testable_hypotheses.html">AWAKEN Testable Hypotheses</a></li>
 <li class="toctree-l1"><a class="reference internal" href="field_site.html">AWAKEN Field Site and Wind Farms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="measurements.html">AWAKEN Measurements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="benchmark_1_farmwake.html">Benchmark 1: Wind Farm Wake</a></li>
+<li class="toctree-l1"><a class="reference internal" href="benchmark_1_farmwake.html">Benchmark 1: Wakes, Diurnal Cycle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="signup.html">Sign-up!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="phase1.html">Phase 1: the baseline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="phase2.html">Phase 2: model improvement with inflow observations</a></li>
