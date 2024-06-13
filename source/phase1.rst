@@ -18,13 +18,13 @@
 Phase 1: the baseline
 ================================
 
-In Phase 1, the benchmark team releases LIMITED inflow observations at AWAKEN for 24 August 2023 and NREL’s open-source wind turbine model to the benchmark participants.
+In Phase 1, the benchmark team releases LIMITED inflow observations at AWAKEN for 24 August 2023 (and the day before, if needed to start the simulations) and NREL’s open-source wind turbine model to the benchmark participants.
 The participants leverage the limited inputs and their own best practices to simulate the wakes from the King Plains and Armadillo Flats wind plants.
 The benchmark team then compares the simulated results with the observed values.
 
 Please read the instructions below in detail.
 
-Phase 1 officially starts on 28 May 2024. Participants are expected to submit results for Phase 1 (as specified below) by 1 September 2024.
+Phase 1 officially started on 28 May 2024. Participants are expected to submit results for Phase 1 (as specified below) by 1 September 2024.
 
 
 Model inputs and recommendations
@@ -96,14 +96,14 @@ Benchmark participants are required to submit the following FOUR files by 1 Sept
 	- other model setup choices (e.g., PBL scheme in WRF)
 	- any assumed constants used to run the model (e.g., roughness)
 
-- ONE .netCDF file with modeled atmospheric inflow. The .netCDF file to be filled with simulated data can be found `here <https://app.box.com/s/nf4x11ubp20a00qntbexp4ukcfgzsb61>`_. Do NOT change the structure (e.g., variable names, dimensions) of the file. Please interpolate your simulated data to match the heights listed below whenever reasonable (e.g., if your simulated domain extends to 2 km a.g.l., DO NOT guess/extrapolate any values above that). NaNs should be used anytime simulated data are not available or cannot be interpolated. You can see the coordinates of the AWAKEN sites in the :ref:`Measurements<measurements>` page.
-	- Time series of 30-minute average wind speed, wind direction, TKE, Obukhov length and friction velocity (u*) at sites A1, A2, and A5 at 4 m a.g.l..
-	- Time series of 10-minute average horizontal wind speed, vertical wind speed, wind direction, TI, and TKE at sites A1, A2, B, and E36 every 10 m from 40 m through 4000 m a.g.l.. 
-	- Time series of 10-minute average temperature at sites B and E36 at the following heights: [0, 10, 21, 33, 46, 61, 77, 95, 114, 136, 159, 185, 214, 245, 280, 318, 359, 405, 456, 512, 573, 640, 714, 795, 885, 983, 1092, 1211, 1342, 1486, 1645, 1819, 2011, 2223, 2455, 2710, 2991, 3300, 3640, 4014] m a.g.l.. 
+- ONE .netCDF file with modeled atmospheric inflow. The .netCDF file template to be filled with simulated data can be found `here <https://app.box.com/s/nf4x11ubp20a00qntbexp4ukcfgzsb61>`_. Do NOT change the structure (e.g., variable names, dimensions) of the file. Please interpolate your simulated data to match the heights listed below whenever reasonable (e.g., if your simulated domain extends to 2 km a.g.l., DO NOT guess/extrapolate any values above that). NaNs should be used anytime simulated data are not available (e.g., a model with output available at 2-minute resolution would have 119 NaNs and only 1 value for every 2-minute period in the template) or cannot be interpolated. You can see the coordinates of the AWAKEN sites in the :ref:`Measurements<measurements>` page.
+	- Time series of 1-s wind speed, wind direction, TKE, Obukhov length and friction velocity (u*) at sites A1, A2, and A5 at 4 m a.g.l..
+	- Time series of 1-s horizontal wind speed, vertical wind speed, wind direction, TI, and TKE at sites A1, A2, B, and E36 every 10 m from 40 m through 4000 m a.g.l.. 
+	- Time series of 1-s temperature at sites B and E36 at the following heights: [0, 10, 21, 33, 46, 61, 77, 95, 114, 136, 159, 185, 214, 245, 280, 318, 359, 405, 456, 512, 573, 640, 714, 795, 885, 983, 1092, 1211, 1342, 1486, 1645, 1819, 2011, 2223, 2455, 2710, 2991, 3300, 3640, 4014] m a.g.l.. 
 
 - ONE .netCDF file with modeled turbine response. The .netCDF file to be filled with simulated data can be found `here <https://app.box.com/s/vs2h194c2z2alktwgivzjt1ain4nstle>`_. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.
-	- Time series of 10-minute average hub-height (80 m, 88.5 m, or 90 m a.g.l., see heights for various turbines in the spreadsheet linked above) wind speed at the locations (see coordinates in spreadsheet linked above) of all the Armadillo Flats and King Plains turbines.
-	- Time series of 10-minute average power produced by each of the Armadillo Flats and King Plains turbines.
+	- Time series of 1-s hub-height (80 m, 88.5 m, or 90 m a.g.l., see heights for various turbines in the spreadsheet linked above) wind speed at the locations (see coordinates in spreadsheet linked above) of all the Armadillo Flats and King Plains turbines.
+	- Time series of 1-s power produced by each of the Armadillo Flats and King Plains turbines.
 
 - ONE .netCDF file with modeled wake. The .netCDF file to be filled with simulated data can be found `here <https://app.box.com/s/mrjd4om1ffh29d695dqaedyy97b3c9o4>`_. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.
 	MORE DETAILS TO COME
