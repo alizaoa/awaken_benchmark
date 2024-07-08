@@ -64,7 +64,7 @@ The following inputs and recommendations are provided to the benchmark participa
     - Can be downloaded `here <https://app.box.com/s/3mkdtxqmwtg5bhzl6tcahultb60t9lz6>`_. Note: the USGS wind turbine data base information about these two wind farms are NOT accurate.
 
 - Wind turbine model
-    - The turbines in the King Plains and Armadillo Flats wind farms are of four different models, as detailed in :doc:`field_site`. For each of the four turbine types, we provide an open-source turbine model, including Cp and Ct curves, RPM table, pitch table, lift and drag table. The open-source model and documentation on how to use it can be found `here <https://github.com/NREL/openfast-turbine-models>`_. NOTE: at the moment, only one turbine model (2.82 MW turbine) is available. The remaining three models are in their final stages of testing, and we expect to release them very soon.
+    - The turbines in the King Plains and Armadillo Flats wind farms are of four different models, as detailed in :doc:`field_site`. For each of the four turbine types, we provide an open-source turbine model, including Cp and Ct curves, RPM table, pitch table, lift and drag table. The open-source model and documentation on how to use it can be found `here <https://github.com/NREL/openfast-turbine-models>`_.
 
 - Observed inflow wind speed, wind direction, and turbulence. Data also include the day before (23 August 2023) the selected case study if needed.
     - 10-minute average and 1-second retrievals of horizontal wind speed, wind direction, vertical wind speed (and, for the 1-s data, two horizontal wind components) are provided from the profiling lidar at site A1. Data are provided every 20 m from 40 m to 240 m a.g.l.
@@ -105,8 +105,12 @@ Benchmark participants are required to submit the following FOUR files by 1 Sept
 	- Time series of 1-s hub-height (80 m, 88.5 m, or 90 m a.g.l., see heights for various turbines in the spreadsheet linked above) wind speed at the locations (see coordinates in spreadsheet linked above) of all the Armadillo Flats and King Plains turbines.
 	- Time series of 1-s power produced by each of the Armadillo Flats and King Plains turbines.
 
-- ONE .netCDF file with modeled wake. The .netCDF file to be filled with simulated data can be found `here <https://app.box.com/s/mrjd4om1ffh29d695dqaedyy97b3c9o4>`_. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.
-	MORE DETAILS TO COME
+- ONE .netCDF file with modeled wake. The .netCDF file to be filled with simulated data can be found `here <https://app.box.com/s/mrjd4om1ffh29d695dqaedyy97b3c9o4>`_. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available. You can see the coordinates of the AWAKEN sites in the :ref:`Measurements<measurements>` page.
+	- Time series of 1-s horizontal wind speed, vertical wind speed, wind direction, TI, and TKE at sites C1a, H, and Golf Course every 10 m from 40 m through 4000 m a.g.l.. 
+	- Time series of 1-s wind speed, wind direction, TKE, Obukhov length and friction velocity (u*) at sites C1a, G, and H at 4 m a.g.l..
+	- Time series of 1-s temperature at sites H, C1a, G, and Golf Course at the following heights: [0, 10, 21, 33, 46, 61, 77, 95, 114, 136, 159, 185, 214, 245, 280, 318, 359, 405, 456, 512, 573, 640, 714, 795, 885, 983, 1092, 1211, 1342, 1486, 1645, 1819, 2011, 2223, 2455, 2710, 2991, 3300, 3640, 4014] m a.g.l.. 
+	- Evolution of 1-s wind speed and wind direction across eight horizontal planes north of the E06 King Plains turbine. Height a.g.l. (m) of the eight horizontal planes: 27, 59, 90.5, 122, 154, 217.5, 281, 344.5. Note that the data shall be compiled using a coordinate system centered on the E06 turbine, with x being north-south, y east-west, z vertical. In the template, for each horizontal plane, the x dimension varies from 0 (i.e., the turbine) to ~ +4 km (i.e., north of the turbine) at every 127 m (i.e., 1 rotor diameter); the y dimension varies from -2.54 km (i.e., west of the turbine) to +2.54 km (i.e., east of the turbine) at every 127 m (i.e., 1 rotor diameter).
+
 
 Each participant should submit the FOUR files (one .txt file, three .netCDF files) in the Box folder communicated to each participant at the beginning of the benchmark. For any question about the result submission, please email nicola.bodini@nrel.gov.
 

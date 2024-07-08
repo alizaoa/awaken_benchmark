@@ -99,7 +99,6 @@ Wake measurements (sites C1a, G, Golf Course, H, Turbine E06)
     - **Scanning lidar 2**: DATA ARE UNDERGOING QC -- DETAILS WILL BE POSTED LATER.
     - **Profiling lidar**: a Windcube v1 profiling lidar is deployed at this site. The lidar uses a DBS, 4-beam approach. We provide a vertical profile of horizontal wind speed and the vertical component of the wind. One full profile takes about 4 s to complete. Here, data are provided every 2 minutes, and at every 20 m from 40 m up to 220 m a.g.l.. Data from this lidar have been QCed using a simple CNR threshold (-22 dB). We also note that data from this lidar are only available from 02-19 UTC on 23 August 2023 and 02-18 UTC on 24 August 2023.
     - **Thermodynamic profiler**: ASSIST-II profiler, from which temperature has been retrieved using the TROPoe algorithm developed by Dave Turner (NOAA). For the instrument at site G, data are available at 30-minute resolution, from the ground up to over 15 km, at varying vertical resolution.
-    - **Sonic anemometer**: DATA ARE UNDERGOING QC -- DETAILS WILL BE POSTED LATER.
 
 - **Site G** (GPS coordinates: 36°23'58.1"N 97°24'28.9"W)
     - **Thermodynamic profiler**: ASSIST-II profiler, from which temperature has been retrieved using the TROPoe algorithm developed by Dave Turner (NOAA). For the instrument at site G, data are available at 30-minute resolution, from the ground up to over 15 km, at varying vertical resolution.
@@ -114,8 +113,14 @@ Wake measurements (sites C1a, G, Golf Course, H, Turbine E06)
     - **Scanning lidar**: a Halo Photonics Streamline XR scanning lidar is deployed at this site. The lidar operates on a 30-min scanning strategy, which is then repeated. The first 20-min are used to perform regular 6-beam scans to derive the vertical profile of the wind speed. Each 6-beam scan lasts about 4 seconds. After each 20-min period, the lidar stares vertically for the remaining 10 minutes. Because of the lidar blind zone, the lowest elevation with good quality data is 110 m a.g.l. Data are provided every 10 m up to 4 km. Data from this lidar have been QCed using the lidar dynamic filter approach.
     - **Sonic anemometer**: Gill R3-50, omnidirectional mounted on top of a 4-meter tripod. We provide QCed, 30-min average values of wind speed, wind direction, u, v, w wind components, sonic temperature, sensible heat flux, friction velocity, TKE, Obukhov length. The turbulent fluxes and corresponding statistics were estimated from 30-minute raw data using software initially developed for ARM ECOR systems.
 
-- **Turbine E06** (GPS coordinates: )
-    - **Scanning lidar**: DATA ARE UNDERGOING QC -- DETAILS WILL BE POSTED LATER.
+- **Turbine E06** (GPS coordinates: 36°24'39.64"N 97°24'21.24"W)
+    - **Scanning lidar**: this scanning lidar is mounted on the nacelle roof, and performs a variety of scans which sample both the inflow and the wake of the turbine (at different times), with a scanning strategy that is repeated every 2 hours. The details of the various scans are described below:
+          - inflow turbulence scans (00:00-00:30 and every 2 hours after that): PPI scans which provide instantaneous radial wind speed over horizontal hub-height plane.
+          - wake meandering scans (00:30-01:00 and every 2 hours after that): PPI and RHI scans which provide instantaneous radial wind speed over horizontal hub-height plane and over vertical plane aligned with turbine yaw position.
+          - inflow statistics scans (01:00-01:20 and every 2 hours after that): PPI scans which provide 20-minute average streamwise wind speed and its standard deviation at 3D locations. 
+          - wake 3D statistics scans (01:00-01:40 and every 2 hours after that): PPI scans which provide 20-minute average streamwise wind speed and its standard deviation at 3D locations.
+          - farm statistics scans (01:40-02:00 and every 2 hours after that): volumetric scans which provide 20-minute average streamwise wind speed and its standard deviation at 3D locations.
+
 
 SCADA
 ------------------------------------------------------------
