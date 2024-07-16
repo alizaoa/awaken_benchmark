@@ -24,6 +24,7 @@ Case Study
 The goal of this benchmark is to simulate the area around the King Plains and Armadillo Flats wind farms on 24 August 2023. The size of the modeling domain is left to the participants, however, we recommend to include both wind farms to be able to capture their interaction during the day to simulate.
 
 IF the above is not possible, we recommend participants to focus on the region in the map below, to maximize chances for a valuable comparison across models.
+IF only selected time periods can be afforded, please focus on periods from 05-07 UTC and 17-19 UTC.
 
 .. figure:: images/limited_domain.png
 
