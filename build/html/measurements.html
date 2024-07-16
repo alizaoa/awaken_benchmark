@@ -213,7 +213,6 @@
 <li><p><strong>Scanning lidar 2</strong>: DATA ARE UNDERGOING QC – DETAILS WILL BE POSTED LATER.</p></li>
 <li><p><strong>Profiling lidar</strong>: a Windcube v1 profiling lidar is deployed at this site. The lidar uses a DBS, 4-beam approach. We provide a vertical profile of horizontal wind speed and the vertical component of the wind. One full profile takes about 4 s to complete. Here, data are provided every 2 minutes, and at every 20 m from 40 m up to 220 m a.g.l.. Data from this lidar have been QCed using a simple CNR threshold (-22 dB). We also note that data from this lidar are only available from 02-19 UTC on 23 August 2023 and 02-18 UTC on 24 August 2023.</p></li>
 <li><p><strong>Thermodynamic profiler</strong>: ASSIST-II profiler, from which temperature has been retrieved using the TROPoe algorithm developed by Dave Turner (NOAA). For the instrument at site G, data are available at 30-minute resolution, from the ground up to over 15 km, at varying vertical resolution.</p></li>
-<li><p><strong>Sonic anemometer</strong>: DATA ARE UNDERGOING QC – DETAILS WILL BE POSTED LATER.</p></li>
 </ul>
 </dd>
 </dl>
@@ -244,8 +243,18 @@
 </dl>
 </li>
 <li><dl class="simple">
-<dt><strong>Turbine E06</strong> (GPS coordinates: )</dt><dd><ul>
-<li><p><strong>Scanning lidar</strong>: DATA ARE UNDERGOING QC – DETAILS WILL BE POSTED LATER.</p></li>
+<dt><strong>Turbine E06</strong> (GPS coordinates: 36°24’39.64”N 97°24’21.24”W)</dt><dd><ul>
+<li><dl class="simple">
+<dt><strong>Scanning lidar</strong>: this scanning lidar is mounted on the nacelle roof, and performs a variety of scans which sample both the inflow and the wake of the turbine (at different times), with a scanning strategy that is repeated every 2 hours. The details of the various scans are described below:</dt><dd><ul>
+<li><p>inflow turbulence scans (00:00-00:30 and every 2 hours after that): PPI scans which provide instantaneous radial wind speed over horizontal hub-height plane.</p></li>
+<li><p>wake meandering scans (00:30-01:00 and every 2 hours after that): PPI and RHI scans which provide instantaneous radial wind speed over horizontal hub-height plane and over vertical plane aligned with turbine yaw position.</p></li>
+<li><p>inflow statistics scans (01:00-01:20 and every 2 hours after that): PPI scans which provide 20-minute average streamwise wind speed and its standard deviation at 3D locations.</p></li>
+<li><p>wake 3D statistics scans (01:00-01:40 and every 2 hours after that): PPI scans which provide 20-minute average streamwise wind speed and its standard deviation at 3D locations.</p></li>
+<li><p>farm statistics scans (01:40-02:00 and every 2 hours after that): volumetric scans which provide 20-minute average streamwise wind speed and its standard deviation at 3D locations.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </dd>
 </dl>

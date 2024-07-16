@@ -44,11 +44,11 @@ The benchmark team then compares the simulated results with the observed values.
 <section id="model-inputs-and-recommendations">
 <h2>Model inputs and recommendations<a class="headerlink" href="#model-inputs-and-recommendations" title="Permalink to this heading">¶</a></h2>
 <p>The following inputs and recommendations are provided to the benchmark participants:</p>
-<ul class="simple">
-<li><dl class="simple">
+<ul>
+<li><dl>
 <dt>Recommended topographical data set</dt><dd><ul>
-<li><dl class="simple">
-<dt>USGS 1⁄3 arc-sec Digital Elevation Model (DEM) can be downloaded from the USGS website (<a class="reference external" href="https://data.usgs.gov/datacatalog/data/USGS:3a81321b-c153-416f-98b7-cc8e5f0e17c3">https://data.usgs.gov/datacatalog/data/USGS:3a81321b-c153-416f-98b7-cc8e5f0e17c3</a>). We note that for mesoscale models coarser data sets can be used, such as the WRF default 30-sec data set. Below, we provide a suggested step-by-step process on how to use the USGS data in WRF:</dt><dd><ul>
+<li><dl>
+<dt>USGS 1⁄3 arc-sec Digital Elevation Model (DEM) can be downloaded from the USGS website (<a class="reference external" href="https://data.usgs.gov/datacatalog/data/USGS:3a81321b-c153-416f-98b7-cc8e5f0e17c3">https://data.usgs.gov/datacatalog/data/USGS:3a81321b-c153-416f-98b7-cc8e5f0e17c3</a>). We note that for mesoscale models coarser data sets can be used, such as the WRF default 30-sec data set. Below, we provide a suggested step-by-step process on how to use the USGS data in WRF:</dt><dd><ul class="simple">
 <li><p>Download the s11_w041_1arc_v3.tif file from the link above</p></li>
 <li><p>In QGIS, Layer -&gt; Add Layer -&gt; Add Raster Layer; select the s11_w041_1arc_v3.tif file</p></li>
 <li><p>Using the GIS4WRF plugin, GIS4WRF -&gt; Datasets -&gt; Process -&gt; Convert active layer to WPS binary -&gt; Is this layer’s data categorical? (NO) -&gt; Save data</p></li>
@@ -61,6 +61,7 @@ The benchmark team then compares the simulated results with the observed values.
 </dl>
 </li>
 </ul>
+<p>NOTE: the USGS website has been revamped and it’s not working great now. William Radünz kindly shared the ‘USGS_13_n37w098_20181130.tif’ file, which includes the terrain data for the AWAKEN site, at <a class="reference external" href="https://drive.google.com/drive/folders/1J526AjlzKZZlN4DuPU8K7wKH5AX9khTL">this</a> link. The folder also contains the data already pre-processed for WRF users within ‘topo_srtm_1_3s’.</p>
 </dd>
 </dl>
 </li>
@@ -69,7 +70,7 @@ The benchmark team then compares the simulated results with the observed values.
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Recommended land use data set</dt><dd><ul>
+<dt>Recommended land use data set</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt>National Land Cover Dataset 1 arc-sec 2019, about 30 m spatial resolution, can be downloaded from <a class="reference external" href="https://www.sciencebase.gov/catalog/item/604a4fb1d34eb120311b0039">https://www.sciencebase.gov/catalog/item/604a4fb1d34eb120311b0039</a>. Below, we provide a suggested step-by-step process on how to use this data in WRF:</dt><dd><ul>
 <li><p>Download the nlcd_2019_land_cover_l48_20210604.zip file from the link above and extract data</p></li>
@@ -98,28 +99,28 @@ num_land_cat = 20</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Recommended roughness length values</dt><dd><ul>
+<dt>Recommended roughness length values</dt><dd><ul class="simple">
 <li><p>We do not impose a fixed roughness length value to the benchmark participants. Instead, this should be considered as a calibration parameter to match the observed atmospheric conditions. In general, the AWAKEN region is characterized by pastures, crops, and scattered trees, so that roughness length values between 0.03-0.2 m seem appropriate. We also note that in WRF the roughness will be calculated by the land surface model used, and then adopted in the selected surface layer scheme.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>King Plain and Armadillo Flats turbine locations and dimensions</dt><dd><ul>
+<dt>King Plain and Armadillo Flats turbine locations and dimensions</dt><dd><ul class="simple">
 <li><p>Can be downloaded <a class="reference external" href="https://app.box.com/s/3mkdtxqmwtg5bhzl6tcahultb60t9lz6">here</a>. Note: the USGS wind turbine data base information about these two wind farms are NOT accurate.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Wind turbine model</dt><dd><ul>
-<li><p>The turbines in the King Plains and Armadillo Flats wind farms are of four different models, as detailed in <a class="reference internal" href="field_site.html"><span class="doc">AWAKEN Field Site and Wind Farms</span></a>. For each of the four turbine types, we provide an open-source turbine model, including Cp and Ct curves, RPM table, pitch table, lift and drag table. The open-source model and documentation on how to use it can be found <a class="reference external" href="https://github.com/NREL/openfast-turbine-models">here</a>. NOTE: at the moment, only one turbine model (2.82 MW turbine) is available. The remaining three models are in their final stages of testing, and we expect to release them very soon.</p></li>
+<dt>Wind turbine model</dt><dd><ul class="simple">
+<li><p>The turbines in the King Plains and Armadillo Flats wind farms are of four different models, as detailed in <a class="reference internal" href="field_site.html"><span class="doc">AWAKEN Field Site and Wind Farms</span></a>. For each of the four turbine types, we provide an open-source turbine model, including Cp and Ct curves, RPM table, pitch table, lift and drag table. The open-source model and documentation on how to use it can be found <a class="reference external" href="https://github.com/NREL/openfast-turbine-models">here</a>. NEW: WRF-specific files that include information on the four turbine types can now be found <a class="reference external" href="https://app.box.com/s/l4j6lk34kazbinwr5c8j23j8nbuejsyq">here</a>.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Observed inflow wind speed, wind direction, and turbulence. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul>
+<dt>Observed inflow wind speed, wind direction, and turbulence. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul class="simple">
 <li><p>10-minute average and 1-second retrievals of horizontal wind speed, wind direction, vertical wind speed (and, for the 1-s data, two horizontal wind components) are provided from the profiling lidar at site A1. Data are provided every 20 m from 40 m to 240 m a.g.l.</p></li>
 <li><p>10-minute average retrievals of TI and TKE are provided from the scanning lidar at site A1. Data are provided at 110 m a.g.l.</p></li>
 <li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/o6xh24i0liygn10eh6duup4spd7pxcvu">here</a>.</p></li>
@@ -129,7 +130,7 @@ num_land_cat = 20</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Observed inflow temperature. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul>
+<dt>Observed inflow temperature. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul class="simple">
 <li><p>30-minute average temperature profiles at the surface from the ASSIST-II at site B.</p></li>
 <li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/c6m0o6nwkkp937rq4pxz5c2y0j2rg2c9">here</a>.</p></li>
 <li><p><a class="reference external" href="https://app.box.com/s/maluixmdg8739xru9x5usf9hbh1euxm4">this</a> python script can be used as an example to access and explore this data set.</p></li>
@@ -138,7 +139,7 @@ num_land_cat = 20</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Observed inflow Obukhov length. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul>
+<dt>Observed inflow Obukhov length. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul class="simple">
 <li><p>30-minute average time series at 4 m a.g.l. from sonic anemometers at site A1.</p></li>
 <li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/ljbkhynxlhltc15vifrd3ava4van9pgq">here</a>.</p></li>
 <li><p><a class="reference external" href="https://app.box.com/s/zwr18vq18b756l3w3j8uoly44s52uvqk">this</a> python script can be used as an example to access and explore this data set.</p></li>
@@ -161,33 +162,41 @@ num_land_cat = 20</p>
 <li><p>temporal resolution</p></li>
 <li><p>other model setup choices (e.g., PBL scheme in WRF)</p></li>
 <li><p>any assumed constants used to run the model (e.g., roughness)</p></li>
+<li><p>how your model calculates TI and TKE (if it does – see more details below)</p></li>
+<li><p>If you use any observations not directly provided as part of the benchmark (i.e., listed on this page), please make note of it in this file, and specify what you used and to do what.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>ONE .netCDF file with modeled atmospheric inflow. The .netCDF file template to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/nf4x11ubp20a00qntbexp4ukcfgzsb61">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. Please interpolate your simulated data to match the heights listed below whenever reasonable (e.g., if your simulated domain extends to 2 km a.g.l., DO NOT guess/extrapolate any values above that). NaNs should be used anytime simulated data are not available (e.g., a model with output available at 2-minute resolution would have 119 NaNs and only 1 value for every 2-minute period in the template) or cannot be interpolated. You can see the coordinates of the AWAKEN sites in the <a class="reference internal" href="measurements.html#measurements"><span class="std std-ref">Measurements</span></a> page.</dt><dd><ul>
-<li><p>Time series of 1-s wind speed, wind direction, TKE, Obukhov length and friction velocity (u*) at sites A1, A2, and A5 at 4 m a.g.l..</p></li>
-<li><p>Time series of 1-s horizontal wind speed, vertical wind speed, wind direction, TI, and TKE at sites A1, A2, B, and E36 every 10 m from 40 m through 4000 m a.g.l..</p></li>
-<li><p>Time series of 1-s temperature at sites B and E36 at the following heights: [0, 10, 21, 33, 46, 61, 77, 95, 114, 136, 159, 185, 214, 245, 280, 318, 359, 405, 456, 512, 573, 640, 714, 795, 885, 983, 1092, 1211, 1342, 1486, 1645, 1819, 2011, 2223, 2455, 2710, 2991, 3300, 3640, 4014] m a.g.l..</p></li>
+<dt>ONE .netCDF file with modeled atmospheric inflow. The .netCDF file template to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/nf4x11ubp20a00qntbexp4ukcfgzsb61">here</a>. Do NOT change the variable names and heights in the file. Please interpolate your simulated data to match the heights listed below whenever reasonable (e.g., if your simulated domain extends to 2 km a.g.l., DO NOT guess/extrapolate any values above that). Please DO change the temporal dimension in the template to match that of your model output. If your model output is available at really high frequency, such that the file to submit would become too big, please do NOT calculate averages, and just submit instantaneous data at whatever time resolution you feel comfortable submitting results at. Please only submit TI and TKE if your model directly outputs them. If that is the case, please specify in the .txt file above how they are calculated (averaging time, center of the window, etc.). If your model does NOT directly calculate TI and TKE, please do NOT provide them in the submitted file, and we will calculate them ourselves whenever possible to ensure consistency. NaNs should be used where simulated data are not available. You can find the coordinates of the AWAKEN sites in the <a class="reference internal" href="measurements.html#measurements"><span class="std std-ref">Measurements</span></a> page.</dt><dd><ul>
+<li><p>Time series of u, v, w, wind speed, wind direction, TI, TKE, Obukhov length at sites A1, A2, and A5 at 4 m a.g.l..</p></li>
+<li><p>Time series of u, v, w, wind speed, wind direction, TI, TKE at sites A1, A2, B, and E36 every 10 m from 40 m through 4000 m a.g.l..</p></li>
+<li><p>Time series of temperature at sites B and E36 at the following heights: [0, 10, 21, 33, 46, 61, 77, 95, 114, 136, 159, 185, 214, 245, 280, 318, 359, 405, 456, 512, 573, 640, 714, 795, 885, 983, 1092, 1211, 1342, 1486, 1645, 1819, 2011, 2223, 2455, 2710, 2991, 3300, 3640, 4014] m a.g.l..</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>ONE .netCDF file with modeled turbine response. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/vs2h194c2z2alktwgivzjt1ain4nstle">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.</dt><dd><ul>
-<li><p>Time series of 1-s hub-height (80 m, 88.5 m, or 90 m a.g.l., see heights for various turbines in the spreadsheet linked above) wind speed at the locations (see coordinates in spreadsheet linked above) of all the Armadillo Flats and King Plains turbines.</p></li>
-<li><p>Time series of 1-s power produced by each of the Armadillo Flats and King Plains turbines.</p></li>
+<dt>ONE .netCDF file with modeled turbine response. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/vs2h194c2z2alktwgivzjt1ain4nstle">here</a>. Do NOT change the variable names and heights in the file. The same considerations as above apply for the time resolution of the results to submit. NaNs should be used where simulated data are not available.</dt><dd><ul>
+<li><p>Time series of hub-height (80 m, 88.5 m, or 90 m a.g.l., see heights for various turbines in the spreadsheet linked above) wind speed at the locations (see coordinates in spreadsheet linked above) of all the Armadillo Flats and King Plains turbines. Note: these simulated values will be compared with those from the turbine SCADA, whose values are reported AFTER a nacelle transfer function is applied.</p></li>
+<li><p>Time series of power produced by each of the Armadillo Flats and King Plains turbines.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>ONE .netCDF file with modeled wake. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/mrjd4om1ffh29d695dqaedyy97b3c9o4">here</a>. Do NOT change the structure (e.g., variable names, dimensions) of the file. NaNs should be used where simulated data are not available.</dt><dd><p>MORE DETAILS TO COME</p>
+<dt>ONE .netCDF file with modeled wake. The .netCDF file to be filled with simulated data can be found <a class="reference external" href="https://app.box.com/s/mrjd4om1ffh29d695dqaedyy97b3c9o4">here</a>. Do NOT change the variable names and heights in the file. The same considerations as above apply for the time resolution of the results to submit. NaNs should be used where simulated data are not available. You can see the coordinates of the AWAKEN sites in the <a class="reference internal" href="measurements.html#measurements"><span class="std std-ref">Measurements</span></a> page.</dt><dd><ul>
+<li><p>Time series of u, v, w, wind speed, wind direction, TI, TKE at sites C1a, H, and Golf Course every 10 m from 40 m through 4000 m a.g.l..</p></li>
+<li><p>Time series of u, v, w, wind speed, wind direction, TI, TKE, Obukhov length at sites C1a, G, and H at 4 m a.g.l..</p></li>
+<li><p>Time series of temperature at sites H, C1a, G, and Golf Course at the following heights: [0, 10, 21, 33, 46, 61, 77, 95, 114, 136, 159, 185, 214, 245, 280, 318, 359, 405, 456, 512, 573, 640, 714, 795, 885, 983, 1092, 1211, 1342, 1486, 1645, 1819, 2011, 2223, 2455, 2710, 2991, 3300, 3640, 4014] m a.g.l..</p></li>
+<li><p>Evolution of wind speed and wind direction across eight horizontal planes north of the E06 King Plains turbine. Height a.g.l. (m) of the eight horizontal planes: 27, 59, 90.5, 122, 154, 217.5, 281, 344.5. Note that the data shall be compiled using a coordinate system centered on the E06 turbine, with x being north-south, y east-west, z vertical. In the template, for each horizontal plane, the x dimension varies from 0 (i.e., the turbine) to ~ +4 km (i.e., north of the turbine) at every 127 m (i.e., 1 rotor diameter); the y dimension varies from -2.54 km (i.e., west of the turbine) to +2.54 km (i.e., east of the turbine) at every 127 m (i.e., 1 rotor diameter).</p></li>
+</ul>
 </dd>
 </dl>
 </li>
 </ul>
+<p>Note that in the above, u is the wind component along the North-South direction (positive going from South to North), u is the wind component along the East-West direction (positive going from West to East), w is the vertical component (positive going up).</p>
 <p>Each participant should submit the FOUR files (one .txt file, three .netCDF files) in the Box folder communicated to each participant at the beginning of the benchmark. For any question about the result submission, please email <a class="reference external" href="mailto:nicola&#46;bodini&#37;&#52;&#48;nrel&#46;gov">nicola<span>&#46;</span>bodini<span>&#64;</span>nrel<span>&#46;</span>gov</a>.</p>
 </section>
 </section>
