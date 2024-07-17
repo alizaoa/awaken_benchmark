@@ -69,7 +69,7 @@ Benchmark participants are required to submit the following FOUR files by 15 Dec
 - ONE .txt file with model setup information:
 	- domain extension
 	- 3D grid resolution
-	- temporal resolution
+	- temporal resolution (and specify if results are being submitted as averages or instantaneous values)
 	- other model setup choices (e.g., PBL scheme in WRF)
 	- any assumed constants used to run the model (e.g., roughness)
 	- how your model calculates TI and TKE (if it does -- see more details below)
