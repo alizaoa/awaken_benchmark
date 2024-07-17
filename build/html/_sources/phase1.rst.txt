@@ -114,7 +114,10 @@ Benchmark participants are required to submit the following FOUR files by 1 Sept
 	- Time series of temperature at sites H, C1a, G, and Golf Course at the following heights: [0, 10, 21, 33, 46, 61, 77, 95, 114, 136, 159, 185, 214, 245, 280, 318, 359, 405, 456, 512, 573, 640, 714, 795, 885, 983, 1092, 1211, 1342, 1486, 1645, 1819, 2011, 2223, 2455, 2710, 2991, 3300, 3640, 4014] m a.g.l.. 
 	- Evolution of wind speed and wind direction across eight horizontal planes north of the E06 King Plains turbine. Height a.g.l. (m) of the eight horizontal planes: 27, 59, 90.5, 122, 154, 217.5, 281, 344.5. Note that the data shall be compiled using a coordinate system centered on the E06 turbine, with x being north-south, y east-west, z vertical. In the template, for each horizontal plane, the x dimension varies from 0 (i.e., the turbine) to ~ +4 km (i.e., north of the turbine) at every 127 m (i.e., 1 rotor diameter); the y dimension varies from -2.54 km (i.e., west of the turbine) to +2.54 km (i.e., east of the turbine) at every 127 m (i.e., 1 rotor diameter).
 
-Note that in the above, u is the wind component along the North-South direction (positive going from South to North), u is the wind component along the East-West direction (positive going from West to East), w is the vertical component (positive going up).
+Notes: 
+	- in the above, u is the wind component along the North-South direction (positive going from South to North), u is the wind component along the East-West direction (positive going from West to East), w is the vertical component (positive going up).
+	- more in general, units for all variables are detailed in the Glossary page here on the website.
+	- we are also now providing python scripts that can be used to create templates with a different time resolution from the one provided by us. These scripts are really easy to use (they only require modifying ONE number as detailed in the scripts). The scripts are available in the same Box folders linked above.
 
 Each participant should submit the FOUR files (one .txt file, three .netCDF files) in the Box folder communicated to each participant at the beginning of the benchmark. For any question about the result submission, please email nicola.bodini@nrel.gov.
 
