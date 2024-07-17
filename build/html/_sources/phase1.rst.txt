@@ -33,16 +33,17 @@ Model inputs and recommendations
 The following inputs and recommendations are provided to the benchmark participants:
 
 - Recommended topographical data set
-    - USGS 1⁄3 arc-sec Digital Elevation Model (DEM) can be downloaded from the USGS website (https://data.usgs.gov/datacatalog/data/USGS:3a81321b-c153-416f-98b7-cc8e5f0e17c3). We note that for mesoscale models coarser data sets can be used, such as the WRF default 30-sec data set. Below, we provide a suggested step-by-step process on how to use the USGS data in WRF:
-	- Download the s11_w041_1arc_v3.tif file from the link above
-	- In QGIS, Layer -> Add Layer -> Add Raster Layer; select the s11_w041_1arc_v3.tif file
+    - USGS 1⁄3 arc-sec Digital Elevation Model (DEM) can be downloaded from the USGS National Map Downloader (https://apps.nationalmap.gov/downloader/#/). You will want to select the Elevation Product, and the 1/3 datasets will be selected by default. Then, use the map to zoom into your area of interest and use the search products button. You can then see what products are available in the area covered by your current map extent. To download a product, click the download link to the right of it. 
+We note that for mesoscale models coarser data sets can be used, such as the WRF default 30-sec data set. Below, we provide a suggested step-by-step process on how to use the USGS data in WRF:
+	- Download the .tif file from the website linked above
+	- In QGIS, Layer -> Add Layer -> Add Raster Layer; select the .tif file
 	- Using the GIS4WRF plugin, GIS4WRF -> Datasets -> Process -> Convert active layer to WPS binary -> Is this layer's data categorical? (NO) -> Save data
 	- Copy binaries and index files to a new directory, for instance, “topo_srtm_3s”
 	- Move “topo_srtm_3s” to the directory that stores WRF static datasets, which is usually WPS_GEOG
 	- Create the new terrain class “topo_srtn_1_3s” in GEOGRID.TBL
 	- Select as an option in the WRF namelist.wps
 		geog_data_res = 'topo_srtm_1_3s'
-	NOTE: the USGS website has been revamped and it’s not working great now. William Radünz kindly shared the 'USGS_13_n37w098_20181130.tif' file, which includes the terrain data for the AWAKEN site, at `this <https://drive.google.com/drive/folders/1J526AjlzKZZlN4DuPU8K7wKH5AX9khTL>`_ link. The folder also contains the data already pre-processed for WRF users within 'topo_srtm_1_3s’.
+	NOTE: William Radünz kindly shared the 'USGS_13_n37w098_20181130.tif' file, which includes the terrain data for the AWAKEN site, at `this <https://app.box.com/s/sdiqqbns5laslnmgkkjkk64fkcl1ds4f>`_ link. The folder also contains the data already pre-processed for WRF users in the 'topo_srtm_1_3s’ folder.
 
 - Recommended land use data set
     - National Land Cover Dataset 1 arc-sec 2019, about 30 m spatial resolution, can be downloaded from https://www.sciencebase.gov/catalog/item/604a4fb1d34eb120311b0039. Below, we provide a suggested step-by-step process on how to use this data in WRF:
@@ -80,7 +81,7 @@ The following inputs and recommendations are provided to the benchmark participa
     - 30-minute average time series at 4 m a.g.l. from sonic anemometers at site A1.
     - data are available in netCDF format `here <https://app.box.com/s/ljbkhynxlhltc15vifrd3ava4van9pgq>`_.
     - `this <https://app.box.com/s/zwr18vq18b756l3w3j8uoly44s52uvqk>`_ python script can be used as an example to access and explore this data set.
-More details about the observations can be found in the :ref:`Measurements<measurements>` page.
+More details about the observations can be found in the :ref:`Measurements<measurements>` page. Note: for all average files, the time stamps indicate the middle of the averaging period (e.g., if a file that has 30-minute average data has a :45 time stamp, it means that data from :30 to :00 have been averaged).
 
 We note that any parameters not listed above are left to the decisions of each participant.
 
