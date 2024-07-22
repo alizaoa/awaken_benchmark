@@ -44,17 +44,11 @@ The benchmark team then compares the simulated results with the observed values.
 <section id="model-inputs-and-recommendations">
 <h2>Model inputs and recommendations<a class="headerlink" href="#model-inputs-and-recommendations" title="Permalink to this heading">¶</a></h2>
 <p>The following inputs and recommendations are provided to the benchmark participants:</p>
-<ul class="simple">
-<li><dl class="simple">
+<ul>
+<li><dl>
 <dt>Recommended topographical data set</dt><dd><ul>
-<li><p>USGS 1⁄3 arc-sec Digital Elevation Model (DEM) can be downloaded from the USGS National Map Downloader (<a class="reference external" href="https://apps.nationalmap.gov/downloader/#/">https://apps.nationalmap.gov/downloader/#/</a>). You will want to select the Elevation Product, and the 1/3 datasets will be selected by default. Then, use the map to zoom into your area of interest and use the search products button. You can then see what products are available in the area covered by your current map extent. To download a product, click the download link to the right of it.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-<dl>
-<dt>We note that for mesoscale models coarser data sets can be used, such as the WRF default 30-sec data set. Below, we provide a suggested step-by-step process on how to use the USGS data in WRF:</dt><dd><ul class="simple">
+<li><dl>
+<dt>USGS 1⁄3 arc-sec Digital Elevation Model (DEM) can be downloaded from the USGS National Map Downloader (<a class="reference external" href="https://apps.nationalmap.gov/downloader/#/">https://apps.nationalmap.gov/downloader/#/</a>). You will want to select the Elevation Product, and the 1/3 datasets will be selected by default. Then, use the map to zoom into your area of interest and use the search products button. You can then see what products are available in the area covered by your current map extent. To download a product, click the download link to the right of it. We note that for mesoscale models coarser data sets can be used, such as the WRF default 30-sec data set. Below, we provide a suggested step-by-step process on how to use the USGS data in WRF:</dt><dd><ul class="simple">
 <li><p>Download the .tif file from the website linked above</p></li>
 <li><p>In QGIS, Layer -&gt; Add Layer -&gt; Add Raster Layer; select the .tif file</p></li>
 <li><p>Using the GIS4WRF plugin, GIS4WRF -&gt; Datasets -&gt; Process -&gt; Convert active layer to WPS binary -&gt; Is this layer’s data categorical? (NO) -&gt; Save data</p></li>
@@ -70,9 +64,13 @@ The benchmark team then compares the simulated results with the observed values.
 <p>NOTE: William Radünz kindly shared the ‘USGS_13_n37w098_20181130.tif’ file, which includes the terrain data for the AWAKEN site, at <a class="reference external" href="https://app.box.com/s/sdiqqbns5laslnmgkkjkk64fkcl1ds4f">this</a> link. The folder also contains the data already pre-processed for WRF users in the ‘topo_srtm_1_3s’ folder.</p>
 </dd>
 </dl>
-<ul class="simple">
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 <li><dl class="simple">
-<dt>Recommended land use data set</dt><dd><ul>
+<dt>Recommended land use data set</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt>National Land Cover Dataset 1 arc-sec 2019, about 30 m spatial resolution, can be downloaded from <a class="reference external" href="https://www.sciencebase.gov/catalog/item/604a4fb1d34eb120311b0039">https://www.sciencebase.gov/catalog/item/604a4fb1d34eb120311b0039</a>. Below, we provide a suggested step-by-step process on how to use this data in WRF:</dt><dd><ul>
 <li><p>Download the nlcd_2019_land_cover_l48_20210604.zip file from the link above and extract data</p></li>
@@ -101,28 +99,28 @@ num_land_cat = 20</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Recommended roughness length values</dt><dd><ul>
+<dt>Recommended roughness length values</dt><dd><ul class="simple">
 <li><p>We do not impose a fixed roughness length value to the benchmark participants. Instead, this should be considered as a calibration parameter to match the observed atmospheric conditions. In general, the AWAKEN region is characterized by pastures, crops, and scattered trees, so that roughness length values between 0.03-0.2 m seem appropriate. We also note that in WRF the roughness will be calculated by the land surface model used, and then adopted in the selected surface layer scheme.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>King Plain and Armadillo Flats turbine locations and dimensions</dt><dd><ul>
+<dt>King Plain and Armadillo Flats turbine locations and dimensions</dt><dd><ul class="simple">
 <li><p>Can be downloaded <a class="reference external" href="https://app.box.com/s/3mkdtxqmwtg5bhzl6tcahultb60t9lz6">here</a>. Note: the USGS wind turbine data base information about these two wind farms are NOT accurate.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Wind turbine model</dt><dd><ul>
+<dt>Wind turbine model</dt><dd><ul class="simple">
 <li><p>The turbines in the King Plains and Armadillo Flats wind farms are of four different models, as detailed in <a class="reference internal" href="field_site.html"><span class="doc">AWAKEN Field Site and Wind Farms</span></a>. For each of the four turbine types, we provide an open-source turbine model, including Cp and Ct curves, RPM table, pitch table, lift and drag table. The open-source model and documentation on how to use it can be found <a class="reference external" href="https://github.com/NREL/openfast-turbine-models">here</a>. NEW: WRF-specific files that include information on the four turbine types can now be found <a class="reference external" href="https://app.box.com/s/l4j6lk34kazbinwr5c8j23j8nbuejsyq">here</a>.</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Observed inflow wind speed, wind direction, and turbulence. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul>
+<dt>Observed inflow wind speed, wind direction, and turbulence. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul class="simple">
 <li><p>10-minute average and 1-second retrievals of horizontal wind speed, wind direction, vertical wind speed (and, for the 1-s data, two horizontal wind components) are provided from the profiling lidar at site A1. Data are provided every 20 m from 40 m to 240 m a.g.l.</p></li>
 <li><p>10-minute average retrievals of TI and TKE are provided from the scanning lidar at site A1. Data are provided at 110 m a.g.l.</p></li>
 <li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/o6xh24i0liygn10eh6duup4spd7pxcvu">here</a>.</p></li>
@@ -132,7 +130,7 @@ num_land_cat = 20</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Observed inflow temperature. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul>
+<dt>Observed inflow temperature. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul class="simple">
 <li><p>30-minute average temperature profiles at the surface from the ASSIST-II at site B.</p></li>
 <li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/c6m0o6nwkkp937rq4pxz5c2y0j2rg2c9">here</a>.</p></li>
 <li><p><a class="reference external" href="https://app.box.com/s/maluixmdg8739xru9x5usf9hbh1euxm4">this</a> python script can be used as an example to access and explore this data set.</p></li>
@@ -141,7 +139,7 @@ num_land_cat = 20</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Observed inflow Obukhov length. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul>
+<dt>Observed inflow Obukhov length. Data also include the day before (23 August 2023) the selected case study if needed.</dt><dd><ul class="simple">
 <li><p>30-minute average time series at 4 m a.g.l. from sonic anemometers at site A1.</p></li>
 <li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/ljbkhynxlhltc15vifrd3ava4van9pgq">here</a>.</p></li>
 <li><p><a class="reference external" href="https://app.box.com/s/zwr18vq18b756l3w3j8uoly44s52uvqk">this</a> python script can be used as an example to access and explore this data set.</p></li>
@@ -200,7 +198,7 @@ num_land_cat = 20</p>
 </ul>
 <dl class="simple">
 <dt>Notes:</dt><dd><ul class="simple">
-<li><p>in the above, u is the wind component along the North-South direction (positive going from South to North), u is the wind component along the East-West direction (positive going from West to East), w is the vertical component (positive going up).</p></li>
+<li><p>in the above, v is the wind component along the North-South direction (positive going from South to North), u is the wind component along the East-West direction (positive going from West to East), w is the vertical component (positive going up).</p></li>
 <li><p>more in general, units for all variables are detailed in the Glossary page here on the website.</p></li>
 <li><p>we are also now providing python scripts that can be used to create templates with a different time resolution from the one provided by us. These scripts are really easy to use (they only require modifying ONE number as detailed in the scripts). The scripts are available in the same Box folders linked above.</p></li>
 </ul>
