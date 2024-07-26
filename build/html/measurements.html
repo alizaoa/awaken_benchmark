@@ -1,19 +1,16 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>AWAKEN Measurements &#8212; AWAKEN Benchmarks 0.1 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=e031e9a9"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Benchmark 1: Wakes, Diurnal Cycle" href="benchmark_1_farmwake.html" />
@@ -163,7 +160,7 @@
 <ul class="simple">
 <li><dl class="simple">
 <dt><strong>Site A1</strong> (GPS coordinates: 36°21’43.6”N 97°24’16.4”W)</dt><dd><ul>
-<li><p><strong>Scanning lidar</strong>: a Halo Photonics Streamline XR scanning lidar is deployed at this site. The lidar operates on a 30-min scanning strategy, which is then repeated. The first 20-min are used to perform tilted 6-beam scans to derive the vertical profile of the wind speed while avoiding to scan the nearby turbines. We note that the data provided to participants have been post-processed in regular (time, height) dimensions, so the tilted nature of the scans has no impact on the structure of the data in the provided files. Each 6-beam scan lasts about 4 seconds. After each 20-min period, the lidar stares vertically for the remaining 10 minutes. Because of the lidar blind zone, the lowest elevation with good quality data is 110 m a.g.l. Data are provided every 10 m up to 4 km. Data from this lidar have been QCed using the lidar dynamic filter approach.</p></li>
+<li><p><strong>Scanning lidar</strong>: a Halo Photonics Streamline XR scanning lidar is deployed at this site. The lidar operates on a 30-min scanning strategy, which is then repeated. The first 20-min are used to perform tilted 6-beam scans to derive the vertical profile of the wind speed while avoiding to scan the nearby turbines. We note that the data provided to participants have been post-processed in regular (time, height) dimensions, so the tilted nature of the scans has no impact on the structure of the data in the provided files. Each 6-beam scan lasts about 20 seconds. After each 20-min period, the lidar stares vertically for the remaining 10 minutes. Because of the lidar blind zone, the lowest elevation with good quality data is 110 m a.g.l. Data are provided every 10 m up to 4 km. Data from this lidar have been QCed using the lidar dynamic filter approach [Beck and Kuhn, 2018].</p></li>
 <li><p><strong>Profiling lidar</strong>: a Windcube v2 profiling lidar is deployed at this site. The lidar uses a DBS, 5-beam approach. We provide a vertical profile of horizontal wind speed and the vertical component of the wind. One full profile takes about 5 s to complete. We provide data both as 10-minute averages and as instantaneous 1-s data. For the instantaneous data, we provide the three components of the wind speed. In both cases, observations are available every 20 m from 40 m up to 240 m a.g.l.. Data from this lidar have not been systematically QCed, but the CNR values are provided.</p></li>
 <li><p><strong>Sonic anemometer</strong>: Gill R3-50, omnidirectional mounted on top of a 4-meter tripod. We provide QCed, 30-min average values of wind speed, wind direction, u, v, w wind components, sonic temperature, sensible heat flux, friction velocity, TKE, Obukhov length. The turbulent fluxes and corresponding statistics were estimated from 30-minute raw data using software initially developed for ARM ECOR systems.</p></li>
 </ul>
@@ -172,7 +169,7 @@
 </li>
 <li><dl class="simple">
 <dt><strong>Site A2</strong> (GPS coordinates: 36°19’05.5”N 97°24’32.7”W)</dt><dd><ul>
-<li><p><strong>Scanning lidar</strong>: a Halo Photonics Streamline XR scanning lidar is deployed at this site. The lidar operates on a 30-min scanning strategy, which is then repeated. The first 20-min are used to perform regular 6-beam scans to derive the vertical profile of the wind speed. Each 6-beam scan lasts about 4 seconds. After each 20-min period, the lidar stares vertically for the remaining 10 minutes. Because of the lidar blind zone, the lowest elevation with good quality data is 110 m a.g.l. Data are provided every 10 m up to 4 km. Data from this lidar have been QCed using the lidar dynamic filter approach.</p></li>
+<li><p><strong>Scanning lidar</strong>: a Halo Photonics Streamline XR scanning lidar is deployed at this site. The lidar operates on a 30-min scanning strategy, which is then repeated. The first 20-min are used to perform regular 6-beam scans to derive the vertical profile of the wind speed. Each 6-beam scan lasts about 20 seconds. After each 20-min period, the lidar stares vertically for the remaining 10 minutes. Because of the lidar blind zone, the lowest elevation with good quality data is 110 m a.g.l. Data are provided every 10 m up to 4 km. Data from this lidar have been QCed using the lidar dynamic filter approach.</p></li>
 <li><p><strong>Profiling lidar</strong>: a Windcube v1 profiling lidar is deployed at this site. The lidar uses a DBS, 4-beam approach. We provide a vertical profile of horizontal wind speed and the vertical component of the wind. One full profile takes about 4 s to complete. Here, data are provided every 2 minutes, and at every 20 m from 40 m up to 220 m a.g.l.. Data from this lidar have been QCed using a simple CNR threshold (-22 dB). We also note that data from this lidar are only available from 02-19 UTC on 23 August 2023 and 03-18 UTC on 24 August 2023.</p></li>
 <li><p><strong>Sonic anemometer</strong>: Gill R3-50, omnidirectional mounted on top of a 4-meter tripod. We provide QCed, 30-min average values of wind speed, wind direction, u, v, w wind components, sonic temperature, sensible heat flux, friction velocity, TKE, Obukhov length. The turbulent fluxes and corresponding statistics were estimated from 30-minute raw data using software initially developed for ARM ECOR systems.</p></li>
 </ul>
@@ -197,7 +194,7 @@
 <li><dl class="simple">
 <dt><strong>Site E36</strong> (GPS coordinates: 36°07’01.0”N 97°30’39.2”W)</dt><dd><ul>
 <li><p><strong>Scanning lidar</strong>: a Halo Photonics Streamline XR scanning lidar is deployed at this site as part of the CLAMPS module. We provide near-instantaneous vertical profiles of wind speed (and vertical velocity) from this lidar every 10-minutes. Because of the lidar blind zone, the lowest elevation with good quality data is 98.6 m a.g.l. Data are provided every 28 m up to over 10 km. Data from this lidar have been QCed using a simple CNR threshold (-23 dB).</p></li>
-<li><p><strong>Thermodynamic profiler</strong>: ASSIST-II profiler, from which temperature has been retrieved using the TROPoe algorithm developed by Dave Turner (NOAA). For the instrument at site E36, data are available at 10-minute resolution, from the ground up to over 15 km, at varying vertical resolution. Data are only available until 14 UTC on 24 August 2023.</p></li>
+<li><p><strong>Thermodynamic profiler</strong>: ASSIST-II profiler, from which temperature has been retrieved using the TROPoe algorithm developed by Dave Turner (NOAA) et al. For the instrument at site E36, data are available at 10-minute resolution, from the ground up to over 15 km, at varying vertical resolution. Data are only available until 14 UTC on 24 August 2023.</p></li>
 </ul>
 </dd>
 </dl>
@@ -340,8 +337,8 @@
       &copy;2023, Aliza Abraham.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
       |
       <a href="_sources/measurements.rst.txt"
