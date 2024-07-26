@@ -33,8 +33,7 @@ Model inputs and recommendations
 The following inputs and recommendations are provided to the benchmark participants:
 
 - Recommended topographical data set
-    - USGS 1⁄3 arc-sec Digital Elevation Model (DEM) can be downloaded from the USGS National Map Downloader (https://apps.nationalmap.gov/downloader/#/). You will want to select the Elevation Product, and the 1/3 datasets will be selected by default. Then, use the map to zoom into your area of interest and use the search products button. You can then see what products are available in the area covered by your current map extent. To download a product, click the download link to the right of it. 
-We note that for mesoscale models coarser data sets can be used, such as the WRF default 30-sec data set. Below, we provide a suggested step-by-step process on how to use the USGS data in WRF:
+    - USGS 1⁄3 arc-sec Digital Elevation Model (DEM) can be downloaded from the USGS National Map Downloader (https://apps.nationalmap.gov/downloader/#/). You will want to select the Elevation Product, and the 1/3 datasets will be selected by default. Then, use the map to zoom into your area of interest and use the search products button. You can then see what products are available in the area covered by your current map extent. To download a product, click the download link to the right of it. We note that for mesoscale models coarser data sets can be used, such as the WRF default 30-sec data set. Below, we provide a suggested step-by-step process on how to use the USGS data in WRF:
 	- Download the .tif file from the website linked above
 	- In QGIS, Layer -> Add Layer -> Add Raster Layer; select the .tif file
 	- Using the GIS4WRF plugin, GIS4WRF -> Datasets -> Process -> Convert active layer to WPS binary -> Is this layer's data categorical? (NO) -> Save data
@@ -44,6 +43,7 @@ We note that for mesoscale models coarser data sets can be used, such as the WRF
 	- Select as an option in the WRF namelist.wps
 		geog_data_res = 'topo_srtm_1_3s'
 	NOTE: William Radünz kindly shared the 'USGS_13_n37w098_20181130.tif' file, which includes the terrain data for the AWAKEN site, at `this <https://app.box.com/s/sdiqqbns5laslnmgkkjkk64fkcl1ds4f>`_ link. The folder also contains the data already pre-processed for WRF users in the 'topo_srtm_1_3s’ folder.
+	
 
 - Recommended land use data set
     - National Land Cover Dataset 1 arc-sec 2019, about 30 m spatial resolution, can be downloaded from https://www.sciencebase.gov/catalog/item/604a4fb1d34eb120311b0039. Below, we provide a suggested step-by-step process on how to use this data in WRF:
@@ -116,7 +116,7 @@ Benchmark participants are required to submit the following FOUR files by 1 Sept
 	- Evolution of wind speed and wind direction across eight horizontal planes north of the E06 King Plains turbine. Height a.g.l. (m) of the eight horizontal planes: 27, 59, 90.5, 122, 154, 217.5, 281, 344.5. Note that the data shall be compiled using a coordinate system centered on the E06 turbine, with x being north-south, y east-west, z vertical. In the template, for each horizontal plane, the x dimension varies from 0 (i.e., the turbine) to ~ +4 km (i.e., north of the turbine) at every 127 m (i.e., 1 rotor diameter); the y dimension varies from -2.54 km (i.e., west of the turbine) to +2.54 km (i.e., east of the turbine) at every 127 m (i.e., 1 rotor diameter).
 
 Notes: 
-	- in the above, u is the wind component along the North-South direction (positive going from South to North), u is the wind component along the East-West direction (positive going from West to East), w is the vertical component (positive going up).
+	- in the above, v is the wind component along the North-South direction (positive going from South to North), u is the wind component along the East-West direction (positive going from West to East), w is the vertical component (positive going up).
 	- more in general, units for all variables are detailed in the Glossary page here on the website.
 	- we are also now providing python scripts that can be used to create templates with a different time resolution from the one provided by us. These scripts are really easy to use (they only require modifying ONE number as detailed in the scripts). The scripts are available in the same Box folders linked above.
 
