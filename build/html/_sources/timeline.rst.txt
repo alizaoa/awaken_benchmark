@@ -31,19 +31,15 @@ This benchmark exercise is now in progress.
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 1 September 2024| Deadline to submit results for Phase 1: The Baseline                                                                                                                    |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| XX October 2024 | Release of results from Phase 1 and launch of Phase 2, download slides `here <https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa>`_                                 |
+| 12 November 2024| Release of results from Phase 1 and launch of Phase 2, download slides `here <https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa>`_                                 |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| XX November 2024| Phase 2 check-in meeting 1, download slides `here <https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa>`_                                                            |
+| 15 January 2024 | Deadline to submit results for Phase 2: Model Improvement with Inflow Observations                                                                                      |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 15 December 2024| Deadline to submit results for Phase 2: Model Improvement with Inflow Observations                                                                                      |
+| XX February 2025| Release of results from Phase 2 and launch of Phase 3, download slides `here <https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa>`_                                 |                                     
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| XX January 2025 | Release of results from Phase 2 and launch of Phase 3, download slides `here <https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa>`_                                 |                                     
+| 15 April 2025   | Deadline to submit results for Phase 3: Model Improvement with Inflow and Wake Observations                                                                             |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| XX February 2025| Phase 3 check-in meeting 1, download slides `here <https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa>`_                                                            |
-+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 15 March 2025   | Deadline to submit results for Phase 3: Model Improvement with Inflow and Wake Observations                                                                             |
-+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| XX April 2025   | Release of results from Phase 3, download slides `here <https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa>`_                                                       |                             
+| XX May 2025     | Release of results from Phase 3, download slides `here <https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa>`_                                                       |                             
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 

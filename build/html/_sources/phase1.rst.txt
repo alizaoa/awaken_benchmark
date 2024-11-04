@@ -18,13 +18,16 @@
 Phase 1: the baseline
 ================================
 
+**Phase 1 is now completed, please refer to later phases! Slides that show phase 1 results can be downloaded `here <https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa>`_ **
+
+
 In Phase 1, the benchmark team releases LIMITED inflow observations at AWAKEN for 24 August 2023 (and the day before, if needed to start the simulations) and NREL’s open-source wind turbine model to the benchmark participants.
 The participants leverage the limited inputs and their own best practices to simulate the wakes from the King Plains and Armadillo Flats wind plants.
 The benchmark team then compares the simulated results with the observed values.
 
 Please read the instructions below in detail.
 
-Phase 1 officially started on 28 May 2024. Participants are expected to submit results for Phase 1 (as specified below) by 1 September 2024.
+Phase 1 is now completed. It officially started on 28 May 2024. Participants submitted results for Phase 1 (as specified below) by 1 September 2024.
 
 
 Model inputs and recommendations
