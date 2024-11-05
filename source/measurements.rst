@@ -95,8 +95,8 @@ Wake measurements (sites C1a, G, Golf Course, H, Turbine E06)
 ------------------------------------------------------------
 
 - **Site C1a** (GPS coordinates: 36°21'41.8"N 97°30'36.1"W)
-    - **Scanning lidar 1**: DATA ARE UNDERGOING QC -- DETAILS WILL BE POSTED LATER.
-    - **Scanning lidar 2**: DATA ARE UNDERGOING QC -- DETAILS WILL BE POSTED LATER.
+    - **Scanning lidar 1**.
+    - **Scanning lidar 2**.
     - **Profiling lidar**: a Windcube v1 profiling lidar is deployed at this site. The lidar uses a DBS, 4-beam approach. We provide a vertical profile of horizontal wind speed and the vertical component of the wind. One full profile takes about 4 s to complete. Here, data are provided every 2 minutes, and at every 20 m from 40 m up to 220 m a.g.l.. Data from this lidar have been QCed using a simple CNR threshold (-22 dB). We also note that data from this lidar are only available from 02-19 UTC on 23 August 2023 and 02-18 UTC on 24 August 2023.
     - **Thermodynamic profiler**: ASSIST-II profiler, from which temperature has been retrieved using the TROPoe algorithm developed by Dave Turner (NOAA). For the instrument at site G, data are available at 30-minute resolution, from the ground up to over 15 km, at varying vertical resolution.
 
@@ -125,5 +125,8 @@ Wake measurements (sites C1a, G, Golf Course, H, Turbine E06)
 SCADA
 ------------------------------------------------------------
 
-DETAILS WILL BE POSTED LATER
+- **Normal operation**: the following King Plains turbines were shut down the whole time on 24 August 2023: WIT_USKPL_SS001_WT011, WIT_USKPL_SS001_WT029, and WIT_USKPL_SS001_WT079.
 
+- **Curtailment**: we provide a 1-Hz time series, for each King Plains turbine, with a binary flag to indicate derated/curtailed operation. 1 = derated, 0 = normal.
+
+- **Yaw misalignment**: we provide a 1-Hz time series, for each King Plains turbine, of the yaw misalignment.
