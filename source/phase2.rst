@@ -50,8 +50,9 @@ The following inputs and recommendations are provided to the benchmark participa
 
 - SCADA (limited)
     - Normal operation: the following King Plains turbines were shut down the whole time on 24 August 2023: WIT_USKPL_SS001_WT011, WIT_USKPL_SS001_WT029, and WIT_USKPL_SS001_WT079. These four turbines were removed from the updated turbine location spreadsheet `here <https://app.box.com/s/4p0mduqdkp0555sf7mhtuui53exkegt2>`_
-    - Curtailment: we provide a 1-Hz time series, for each King Plains turbine, with a binary flag to indicate derated/curtailed operation. 1 = derated, 0 = normal.
-    - Yaw misalignment: we provide a 1-Hz time series, for each King Plains turbine, of the yaw misalignment.
+    - Curtailment: we provide a 1-min time series, for each King Plains turbine, with a binary flag to indicate derated/curtailed operation. 1 = derated, 0 = normal.
+    - Yaw misalignment: we provide a 1-min time series, for each King Plains turbine, of the yaw misalignment.
+    - Power production: we provide a 1-min average time series of power produced by selected King Plains turbines in the southmost row of turbines in the wind farm (WIT_USKPL_SS001_WT063, WIT_USKPL_SS001_WT064, WIT_USKPL_SS001_WT065, WIT_USKPL_SS001_WT066, WIT_USKPL_SS001_WT067, WIT_USKPL_SS001_WT068, WIT_USKPL_SS001_WT069, WIT_USKPL_SS001_WT070, and WIT_USKPL_SS001_WT071). 
     - Data are available in netCDF format `here <https://app.box.com/s/x7qm7vty8o3y6gnpathsg9e4wqxhftjh>`_.
 
 - Observed inflow wind speed, wind direction, and turbulence profiles
