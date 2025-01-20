@@ -127,6 +127,13 @@ SCADA
 
 - **Normal operation**: the following King Plains turbines were shut down the whole time on 24 August 2023: WIT_USKPL_SS001_WT011, WIT_USKPL_SS001_WT029, and WIT_USKPL_SS001_WT079.
 
-- **Curtailment**: we provide a 1-Hz time series, for each King Plains turbine, with a binary flag to indicate derated/curtailed operation. 1 = derated, 0 = normal.
+- **Curtailment**: we provide a 1-minute time series, for each King Plains turbine, with a binary flag to indicate derated/curtailed operation. 1 = derated, 0 = normal.
 
-- **Yaw misalignment**: we provide a 1-Hz time series, for each King Plains turbine, of the yaw misalignment.
+- **Yaw misalignment**: we provide a 1-minute time series, for each King Plains turbine, of the yaw misalignment.
+
+- **Wind speed**: we provide a 1-minute time series, for each King Plains turbine, of the wind speed as measured by the nacelle anemometers.
+
+- **Wind direction**: we provide a 1-minute time series, for each King Plains turbine, of the wind direction as measured by the nacelle anemometers.
+
+- **Power**: we provide a 1-minute time series, for each King Plains turbine, of the power produced by each turbine.
+

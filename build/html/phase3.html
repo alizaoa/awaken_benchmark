@@ -34,18 +34,86 @@
             
   <style> .red {color:red} </style><style> .blue {color:blue} </style><section id="phase-3-model-improvement-with-inflow-and-wake-observations">
 <h1>Phase 3: model improvement with inflow and wake observations<a class="headerlink" href="#phase-3-model-improvement-with-inflow-and-wake-observations" title="Link to this heading">¶</a></h1>
-<p>In Phase 3, the team releases ALL the wake observations and ALL SCADA to the benchmark participants.
-The participants leverage the additional inputs and what learnt in Phase 2 to simulate the wakes from the King Plains and Armadillo Flats wind plants.
+<p>Slides that show phase 2 results can be downloaded <a class="reference external" href="https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa">here</a>.</p>
+<p>In phase 3, The team releases ALL the inflow and wake observations and all King Plains SCADA to the benchmark participants.
+The participants leverage the additional inputs and what learnt in Phase 1 and 2 to simulate the wakes from the King Plains and Armadillo Flats wind plants.
 The benchmark team then compares the simulated results with the observed values and summarizes results in a journal article.</p>
 <p>Please read the instructions below in detail.</p>
-<p>Phase 3 officially starts in January 2025, when results from Phase 2 are released. Participants are expected to submit results for Phase 3 (as specified below) by 15 March 2025.</p>
+<p>Phase 3 officially starts on XX February 2024, when results from Phase 2 are released. Participants are expected to submit results for Phase 3 (as specified below) by 15 April 2025.</p>
+<section id="updates-from-phase-2">
+<h2>UPDATES from phase 2<a class="headerlink" href="#updates-from-phase-2" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>A reminder that USGS has wrong information for Armadillo Flats, please use the information we provide.</p></li>
+</ul>
+</section>
 <section id="model-inputs-and-recommendations">
 <h2>Model inputs and recommendations<a class="headerlink" href="#model-inputs-and-recommendations" title="Link to this heading">¶</a></h2>
-<p>The following inputs and recommendations are provided to the benchmark participants, on top of what has already been released in Phases 1 and 2:</p>
-<p>MORE DETAILS TO COME.</p>
+<p>The following inputs and recommendations are provided to the benchmark participants, on top of what already released in Phase 1 and 2 (please read those list, too):</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>SCADA</dt><dd><ul>
+<li><p>Normal operation: the following King Plains turbines were shut down the whole time on 24 August 2023: WIT_USKPL_SS001_WT011, WIT_USKPL_SS001_WT029, and WIT_USKPL_SS001_WT079. These four turbines were removed from the updated turbine location spreadsheet <a class="reference external" href="https://app.box.com/s/segeqxz9dkayycrsyjdimgqsn1mynj8m">here</a></p></li>
+<li><p>Curtailment: we provide a 1-min time series, for each King Plains turbine, with a binary flag to indicate derated/curtailed operation. 1 = derated, 0 = normal.</p></li>
+<li><p>Yaw misalignment: we provide a 1-min time series, for each King Plains turbine, of the yaw misalignment.</p></li>
+<li><p>Power production: we provide a 1-min average time series of power produced by all King Plains turbines.</p></li>
+<li><p>Wind speed: we provide a 1-min average time series of wind speed measured by the anemometers on the nacelle of each King Plains turbine.</p></li>
+<li><p>Wind direction: we provide a 1-min average time series of wind direction measured by the anemometers on the nacelle of each King Plains turbine.</p></li>
+<li><p>Data are available in netCDF format <a class="reference external" href="https://app.box.com/s/jrhjer0bd0b5ztpdjg25z1immqmkf83r">here</a>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Observed wake wind speed, wind direction, and turbulence profiles</dt><dd><ul>
+<li><p>10-minute average retrievals of horizontal wind speed, wind direction, three wind speed components, TI, and TKE are provided from the scanning lidar at site H. Data are provided every 10 m from 110 m to 4000 m a.g.l.</p></li>
+<li><p>4-s instantaneous retrievals of horizontal wind speed, wind direction, and the three wind components are provided from the scanning lidars at site H. Data are provided every 10 m from 110 m to 4000 m a.g.l.</p></li>
+<li><p>10-minute average retrievals of horizontal wind speed, wind direction, vertical wind speed are provided from the scanning lidar at site Golf Course. Data are provided every 20 m from 98 m to over 10,000 m a.g.l.</p></li>
+<li><p>10-minute average and 20-second retrievals of horizontal wind speed, wind direction, vertical wind speed are provided from the profiling lidar at site H. Data are provided every 20 m from 40 m to 240 m a.g.l.</p></li>
+<li><p>2-minute average retrievals of horizontal wind speed, wind direction, vertical wind speed are provided from the profiling lidar at site C1a. Data are provided every 20 m from 40 m to 220 m a.g.l.</p></li>
+<li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/lchdu36cylrevpukqir0ardaaicc6jqj">here</a>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Observed wind speed from a nacelle-mounted lidar</dt><dd><ul>
+<li><p>A scanning lidar is mounted on the nacelle roof of King Plain’s turbine E06 (GPS coordinates: 36°24’39.708”N 97°24’21.24”W), and performs a variety of scans which sample both the inflow and the wake of the turbine (at different times), with a scanning strategy that is repeated every 2 hours. The details of the various scans are described below.</p></li>
+<li><p>inflow turbulence scans (00:00-00:30 and every 2 hours after that): PPI scans which provide instantaneous radial wind speed over horizontal hub-height plane.</p></li>
+<li><p>wake meandering scans (00:30-01:00 and every 2 hours after that): PPI and RHI scans which provide instantaneous radial wind speed over horizontal hub-height plane and over vertical plane aligned with turbine yaw position.</p></li>
+<li><p>inflow statistics scans (01:00-01:20 and every 2 hours after that): PPI scans which provide 20-minute average streamwise wind speed and its standard deviation at 3D locations.</p></li>
+<li><p>wake 3D statistics scans (01:00-01:40 and every 2 hours after that): PPI scans which provide 20-minute average streamwise wind speed and its standard deviation at 3D locations.</p></li>
+<li><p>farm statistics scans (01:40-02:00 and every 2 hours after that): volumetric scans which provide 20-minute average streamwise wind speed and its standard deviation at 3D locations.</p></li>
+<li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/umrbo144lzb0rdfqsotyeezbh7av7vvk">here</a>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Observed downwind temperature profiles</dt><dd><ul>
+<li><p>30-minute average temperature profiles from the surface up to over 15 km (at varying vertical resolution) from the ASSIST-II at site C1a and G.</p></li>
+<li><p>10-minute average temperature profiles from the surface up to over 15 km (at varying vertical resolution) from the ASSIST-II at site Golf Course.</p></li>
+<li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/9nysnm1mf1tcwhicwcibmluoebzfjb4u">here</a>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Observed downwind near-surface properties (wind speed, wind direction, u, v, w wind components, sonic temperature, sensible heat flux, friction velocity, TKE, Obukhov length)</dt><dd><ul>
+<li><p>30-minute average time series at 4 m a.g.l. from sonic anemometers at sites G and H.</p></li>
+<li><p>data are available in netCDF format <a class="reference external" href="https://app.box.com/s/iwf4xgs21qp8iiyjmzh2zgvqh08hbgfi">here</a>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>More details about the observations can be found in the <a class="reference internal" href="measurements.html#measurements"><span class="std std-ref">Measurements</span></a> page.</p>
+<p>We note the following:
+- participants are encouraged to make their own decisions about which inflow data set(s) to use to force their simulations. The results about the ‘best’ inflow data sets to use will be part of the overall results of the benchmark.
+- any parameters not listed above are left to the decisions of the single participants.</p>
 </section>
 <section id="phase-3-submission">
 <h2>Phase 3 submission<a class="headerlink" href="#phase-3-submission" title="Link to this heading">¶</a></h2>
+<p>Benchmark participants are required to submit the following FOUR files by 15 December 2024:</p>
 <ul class="simple">
 <li><dl class="simple">
 <dt>ONE .txt file with model setup information:</dt><dd><ul>
@@ -56,6 +124,8 @@ The benchmark team then compares the simulated results with the observed values 
 <li><p>any assumed constants used to run the model (e.g., roughness)</p></li>
 <li><p>how your model calculates TI and TKE (if it does – see more details below)</p></li>
 <li><p>If you use any observations not directly provided as part of the benchmark (i.e., listed on this page), please make note of it in this file, and specify what you used and to do what.</p></li>
+<li><p>What forcing data (e.g., reanalysis) you used to force your simulation, if any.</p></li>
+<li><p>Your WRF namelists (for WRF-based models only).</p></li>
 </ul>
 </dd>
 </dl>
@@ -126,6 +196,7 @@ The benchmark team then compares the simulated results with the observed values 
 <li class="toctree-l1"><a class="reference internal" href="phase1.html">Phase 1: the baseline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="phase2.html">Phase 2: model improvement with inflow observations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Phase 3: model improvement with inflow and wake observations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#updates-from-phase-2">UPDATES from phase 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#model-inputs-and-recommendations">Model inputs and recommendations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#phase-3-submission">Phase 3 submission</a></li>
 </ul>

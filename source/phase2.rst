@@ -58,7 +58,7 @@ The following inputs and recommendations are provided to the benchmark participa
 - Observed inflow wind speed, wind direction, and turbulence profiles
     - 10-minute average retrievals of horizontal wind speed, wind direction, three wind speed components, TI, and TKE are provided from the scanning lidars at sites A1 and A2. Data are provided every 10 m from 110 m to 4000 m a.g.l.
     - 4-s instantaneous retrievals of horizontal wind speed, wind direction, and the three wind components are provided from the scanning lidars at sites A1 and A2. Data are provided every 10 m from 110 m to 4000 m a.g.l.
-    - 10-minute average retrievals of horizontal wind speed, wind direction, vertical wind speed are provided from the scanning lidar at site E36. Data are provided every 10 m from 98 m to over 10,000 m a.g.l.
+    - 10-minute average retrievals of horizontal wind speed, wind direction, vertical wind speed are provided from the scanning lidar at site E36. Data are provided every 28 m from 98 m to over 10,000 m a.g.l.
     - 10-minute average and 1-second retrievals of horizontal wind speed, wind direction, vertical wind speed (and, for the 1-s data, two horizontal wind components) are provided from the profiling lidar at site B. Data are provided every 20 m from 40 m to 300 m a.g.l.
     - 10-minute average and 1-second retrievals of horizontal wind speed, wind direction, vertical wind speed (and, for the 1-s data, two horizontal wind components) are provided from the profiling lidar at site A1. Data are provided every 20 m from 40 m to 240 m a.g.l.
     - 2-minute average retrievals of horizontal wind speed, wind direction, vertical wind speed are provided from the profiling lidar at site A2. Data are provided every 20 m from 40 m to 220 m a.g.l.
