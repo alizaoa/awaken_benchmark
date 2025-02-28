@@ -26,7 +26,7 @@ The benchmark team then compares the simulated results with the observed values 
 
 Please read the instructions below in detail.
 
-Phase 3 officially starts on XX February 2024, when results from Phase 2 are released. Participants are expected to submit results for Phase 3 (as specified below) by 15 April 2025.
+Phase 3 officially starts on 13 March 2024, when results from Phase 2 are released. Participants are expected to submit results for Phase 3 (as specified below) by 30 April 2025.
 
 
 UPDATES from phase 2
@@ -93,6 +93,7 @@ Benchmark participants are required to submit the following FOUR files by 15 Dec
 	- If you use any observations not directly provided as part of the benchmark (i.e., listed on this page), please make note of it in this file, and specify what you used and to do what.
 	- What forcing data (e.g., reanalysis) you used to force your simulation, if any.
 	- Your WRF namelists (for WRF-based models only).
+	- What phase 3 input observations you leveraged.
 
 - ONE .netCDF file with modeled atmospheric inflow. The .netCDF file template to be filled with simulated data can be found `here <https://app.box.com/s/nf4x11ubp20a00qntbexp4ukcfgzsb61>`_. Do NOT change the variable names and heights in the file. Please interpolate your simulated data to match the heights listed below whenever reasonable (e.g., if your simulated domain extends to 2 km a.g.l., DO NOT guess/extrapolate any values above that). Please DO change the temporal dimension in the template to match that of your model output. If your model output is available at really high frequency, such that the file to submit would become too big, please do NOT calculate averages, and just submit instantaneous data at whatever time resolution you feel comfortable submitting results at. Please only submit TI and TKE if your model directly outputs them. If that is the case, please specify in the .txt file above how they are calculated (averaging time, center of the window, etc.). If your model does NOT directly calculate TI and TKE, please do NOT provide them in the submitted file, and we will calculate them ourselves whenever possible to ensure consistency. NaNs should be used where simulated data are not available. You can find the coordinates of the AWAKEN sites in the :ref:`Measurements<measurements>` page.
 	- Time series of u, v, w, wind speed, wind direction, TI, TKE, Obukhov length at sites A1, A2, and A5 at 4 m a.g.l..

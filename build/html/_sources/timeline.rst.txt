@@ -35,11 +35,11 @@ This benchmark exercise is now in progress.
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 15 January 2024 | Deadline to submit results for Phase 2: Model Improvement with Inflow Observations                                                                                      |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| XX February 2025| Release of results from Phase 2 and launch of Phase 3, download slides `here <https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa>`_                                 |                                     
+| 13 March 2025   | Release of results from Phase 2 and launch of Phase 3, download slides `here <https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa>`_                                 |                                     
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 15 April 2025   | Deadline to submit results for Phase 3: Model Improvement with Inflow and Wake Observations                                                                             |
+| 30 April 2025   | Deadline to submit results for Phase 3: Model Improvement with Inflow and Wake Observations                                                                             |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| XX May 2025     | Release of results from Phase 3, download slides `here <https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa>`_                                                       |                             
+| XX June 2025    | Release of results from Phase 3, download slides `here <https://app.box.com/s/kf9i4fzy9qqzhagf8ozpv8nty48n8zpa>`_                                                       |                             
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
